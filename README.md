@@ -1,3 +1,5 @@
+ [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/mne-tools/mne-gsoc-2019-BIDS)
+
 # gsoc2019
 
 This repository hosts my [changlog](./changelog.md) file, in which I track my
