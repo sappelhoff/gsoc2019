@@ -1,9 +1,25 @@
 Week 1
 ======
 
+Sunday, 2019-06-02
+------------------
+- wrote blog post for Python Software Foundation: https://blogs.python-gsoc.org/en/blogs/sappelhoffs-blog/first-week-of-gsoc-going-down-several-rabbit-holes/
+- made plans for upcoming week, see Gitter chat: https://gitter.im/mne-tools/mne-gsoc-2019-BIDS?at=5cf3da6df3a60a79a43f7364
+
+Saturday, 2019-06-01
+--------------------
+- free time :)
+
 Friday, 2019-05-31
 ------------------
-- tmp
+- prepared a PR to sphinx-gallery to fix a keyword: https://github.com/sphinx-gallery/sphinx-gallery/pull/500
+- prepared a PR to sphinx-gallery to add viewing sourcecode link to their docs: https://github.com/sphinx-gallery/sphinx-gallery/pull/499
+- made an issue on pybv to deal with deprecation of STIM channel in MNE for BrainVision: https://github.com/bids-standard/pybv/issues/24
+- prepared PR to speed up caching in pybv: https://github.com/bids-standard/pybv/pull/23
+- prepared PR to include Binder links to mne-bids docs: https://github.com/mne-tools/mne-bids/pull/207
+- read up on sphinx_gallery to think about how to include "autoreject" intuition, see: https://github.com/autoreject/autoreject/issues/144
+- suggested example pipeline draft: https://github.com/sappelhoff/gsoc2019/issues/2
+- suggested JSON pipeline API: https://github.com/sappelhoff/gsoc2019/issues/1
 
 Thursday, 2019-05-30
 ---------------------
@@ -11,11 +27,12 @@ Thursday, 2019-05-30
 
 Wednesday, 2019-05-29
 ---------------------
-- made gsoc repository: https://github.com/Sappelhoff/gsoc2019
+- made gsoc repository: https://github.com/sappelhoff/gsoc2019
 - collected ideas for potential pipeline API: link will follow soon (offline for now)
 
 Tuesday, 2019-05-28
 -------------------
+- opened issue for Python Software Foundation GSoC blog, editing not possible: https://github.com/python-gsoc/python-blogs/issues/182
 - wrote blog post: https://blogs.python-gsoc.org/en/blogs/sappelhoffs-blog/google-summer-of-code-gsoc-2019-analysis-pipelines-and-bids/
 - prepared PR to improve CI for mne-study-template: https://github.com/mne-tools/mne-study-template/pull/31
 - forked mne-study-template repository to check where BIDS could ease the flow: https://github.com/mne-tools/mne-study-template
