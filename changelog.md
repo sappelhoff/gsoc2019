@@ -3,10 +3,9 @@ Week 2
 
 Monday, 2019-06-03
 ------------------
+- converted MNE-somato-data to BIDS format: https://osf.io/pqfu5/?view_only=cc572464105e4c07be15b5c6577aa68d
 - prepared PR to fix examples about somato dataset in MNE docs: https://github.com/mne-tools/mne-python/pull/6400
 - reviewed sensor plot location PR: https://github.com/mne-tools/mne-python/pull/6394
-
-
 
 Week 1
 ======
