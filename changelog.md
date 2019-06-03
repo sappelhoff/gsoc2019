@@ -1,3 +1,13 @@
+Week 2
+======
+
+Monday, 2019-06-03
+------------------
+- prepared PR to fix examples about somato dataset in MNE docs: https://github.com/mne-tools/mne-python/pull/6400
+- reviewed sensor plot location PR: https://github.com/mne-tools/mne-python/pull/6394
+
+
+
 Week 1
 ======
 
