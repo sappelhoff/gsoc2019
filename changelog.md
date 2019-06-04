@@ -1,6 +1,11 @@
 Week 2
 ======
 
+Tuesday, 2019-06-04
+------------------
+- inquired more about the background of somato data: https://gitter.im/mne-tools/mne-gsoc-2019-BIDS?at=5cf6599ff3a60a79a45051a4
+
+
 Monday, 2019-06-03
 ------------------
 - converted MNE-somato-data to BIDS format: https://osf.io/pqfu5/?view_only=cc572464105e4c07be15b5c6577aa68d
