@@ -3,6 +3,7 @@ Week 2
 
 Wednesday, 2019-06-05
 ---------------------
+- prepared PR to allow raw fif files to end on `_meg.fif` to increase BIDS complicance in MNE-Python: https://github.com/mne-tools/mne-python/pull/6416
 - prepared PR to run MNE-Python examples with BIDS somato dataset: https://github.com/mne-tools/mne-python/pull/6414
 - looked into `osfclient` to conveniently upload BIDS somato directories to OSF: https://github.com/osfclient/osfclient
 - put derivatives for somato dataset into an adequate structure: https://osf.io/pqfu5/?view_only=cc572464105e4c07be15b5c6577aa68d
