@@ -1,8 +1,14 @@
 Week 2
 ======
 
+Thursday, 2019-06-06
+--------------------
+- continued work on: https://github.com/autoreject/autoreject/pull/147
+- continued work on: https://github.com/mne-tools/mne-python/pull/6416
+
 Wednesday, 2019-06-05
 ---------------------
+- prepared PR to extend autoreject documentation: https://github.com/autoreject/autoreject/pull/147
 - prepared PR to allow raw fif files to end on `_meg.fif` to increase BIDS complicance in MNE-Python: https://github.com/mne-tools/mne-python/pull/6416
 - prepared PR to run MNE-Python examples with BIDS somato dataset: https://github.com/mne-tools/mne-python/pull/6414
 - looked into `osfclient` to conveniently upload BIDS somato directories to OSF: https://github.com/osfclient/osfclient
