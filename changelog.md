@@ -1,10 +1,15 @@
 Week 2
 ======
 
+Friday, 2019-06-07
+------------------
+- went through mne-study-template codebase and prepared PR to improve docs and formatting: https://github.com/mne-tools/mne-study-template/pull/33
+- continued work on: https://github.com/mne-tools/mne-python/pull/6414
+
 Thursday, 2019-06-06
 --------------------
 - checked out docker tutorial: https://docs.docker.com/get-started/
-- continued work on: https://github.com/mne-tools/mne-python/pull/6400
+- continued work on: https://github.com/mne-tools/mne-python/pull/6414
 - continued work on: https://github.com/autoreject/autoreject/pull/147
 - continued work on: https://github.com/mne-tools/mne-python/pull/6416
 
