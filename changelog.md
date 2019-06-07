@@ -3,6 +3,9 @@ Week 2
 
 Friday, 2019-06-07
 ------------------
+- prepared PR to fix several formatting mistakes in the MNE-Python docs: https://github.com/mne-tools/mne-python/pull/6432
+- prepared PR to make mne-study-template more transparent with regards to imports: https://github.com/mne-tools/mne-study-template/pull/34
+- went through derivatives specification for BIDS, trying to make somato compliant: https://github.com/bids-standard/bids-specification/pull/207/files#r291560175
 - went through mne-study-template codebase and prepared PR to improve docs and formatting: https://github.com/mne-tools/mne-study-template/pull/33
 - continued work on: https://github.com/mne-tools/mne-python/pull/6414
 
@@ -41,7 +44,7 @@ Sunday, 2019-06-02
 
 Saturday, 2019-06-01
 --------------------
-- free time :)
+- enjoyed free time :)
 
 Friday, 2019-05-31
 ------------------
