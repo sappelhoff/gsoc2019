@@ -1,5 +1,49 @@
+Week 3
+======
+
+Sunday, 2019-06-16
+------------------
+- wrote weekly GSoC blogpost: https://blogs.python-gsoc.org/en/blogs/sappelhoffs-blog/third-week-of-gsoc-conference-discussions-and-short-gsoc-pause-due-to-summer-school/
+
+Saturday, 2019-06-15
+--------------------
+- enjoyed free time :)
+
+Friday, 2019-05-14
+------------------
+- GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
+
+Thursday, 2019-05-13
+---------------------
+- GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
+
+Wednesday, 2019-05-12
+---------------------
+- GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
+
+Tuesday, 2019-05-11
+-------------------
+- GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
+
+Monday, 2019-05-10
+------------------
+- partially responsible for BIDS talk 1: https://github.com/ohbm/OpenScienceRoom2019/issues/3
+- partially responsible for BIDS talk 2: https://github.com/ohbm/OpenScienceRoom2019/issues/4
+- Meeting with `@jasmainak`, `@agramfort` to discuss further steps in GSoC
+
 Week 2
 ======
+
+Sunday, 2019-06-09
+------------------
+- OHBM opening
+- Met MNE-Python contributors: `@wmvanvliet`, `@jasmainak`, `@agramfort`, `@wmvanvliet`, `@dengemann`
+- Met BIDS community, preparations for talks on Monday
+
+Saturday, 2019-06-08
+--------------------
+- Travelled to OHBM conference 2019: https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageID=3882&activateFull=true
+- Met with `@franklin-feingold` to discuss BIDS current issues
 
 Friday, 2019-06-07
 ------------------
