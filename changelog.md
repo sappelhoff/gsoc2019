@@ -1,3 +1,17 @@
+Week 4
+======
+Wednesday, 2019-05-19
+---------------------
+- concluded summer school: Next day finally back to coding for GSoC!
+
+Tuesday, 2019-05-18
+-------------------
+- GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
+
+Monday, 2019-05-17
+------------------
+- GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
+
 Week 3
 ======
 
