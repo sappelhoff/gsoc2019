@@ -1,14 +1,28 @@
 Week 4
 ======
-Wednesday, 2019-05-19
+
+Friday, 2019-06-21
+---------------------
+- Prepared a PR improving the MEG documentation in the BIDS specification: https://github.com/bids-standard/bids-specification/pull/248
+- Prepared a PR to allow handling of KIT data with the bids-validator: https://github.com/bids-standard/bids-validator/pull/789
+- Continued to work on PR to automatically populate `raw.info['bads']` when reading a raw bids file: https://github.com/mne-tools/mne-bids/pull/209
+    - now also fixes an issue with wrong assumptions on `events.tsv` files: https://github.com/mne-tools/mne-bids/issues/202
+    - furthermore simplifies `read_raw_bids` by dropping optional event outputs and using `mne.Annotations` instead
+
+Thursday, 2019-06-20
+---------------------
+- Prepared an issue on bids-validator to properly check `channels.tsv` files: https://github.com/bids-standard/bids-validator/issues/787
+- Prepared a PR to automatically populate `raw.info['bads']` when reading a raw bids file: https://github.com/mne-tools/mne-bids/pull/209
+
+Wednesday, 2019-06-19
 ---------------------
 - concluded summer school: Next day finally back to coding for GSoC!
 
-Tuesday, 2019-05-18
+Tuesday, 2019-06-18
 -------------------
 - GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
 
-Monday, 2019-05-17
+Monday, 2019-06-17
 ------------------
 - GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
 
@@ -23,23 +37,23 @@ Saturday, 2019-06-15
 --------------------
 - enjoyed free time :)
 
-Friday, 2019-05-14
+Friday, 2019-06-14
 ------------------
 - GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
 
-Thursday, 2019-05-13
+Thursday, 2019-06-13
 ---------------------
 - GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
 
-Wednesday, 2019-05-12
+Wednesday, 2019-06-12
 ---------------------
 - GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
 
-Tuesday, 2019-05-11
+Tuesday, 2019-06-11
 -------------------
 - GSoC "sleeps" in favor of organization of summer school, see week 3 in plan: https://blogs.python-gsoc.org/media/proposals/appelhoff_gsoc2019.pdf
 
-Monday, 2019-05-10
+Monday, 2019-06-10
 ------------------
 - partially responsible for BIDS talk 1: https://github.com/ohbm/OpenScienceRoom2019/issues/3
 - partially responsible for BIDS talk 2: https://github.com/ohbm/OpenScienceRoom2019/issues/4
