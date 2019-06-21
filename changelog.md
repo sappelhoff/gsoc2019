@@ -3,11 +3,17 @@ Week 4
 
 Friday, 2019-06-21
 ---------------------
+- Opened issue on bids-validator on how to use `master` version with `yarn`: https://github.com/bids-standard/bids-validator/issues/790
+- learned about `git bisect`: https://git-scm.com/docs/git-bisect
+- Finished up autoreject intuition PR: https://github.com/autoreject/autoreject/pull/147
 - Prepared a PR improving the MEG documentation in the BIDS specification: https://github.com/bids-standard/bids-specification/pull/248
 - Prepared a PR to allow handling of KIT data with the bids-validator: https://github.com/bids-standard/bids-validator/pull/789
 - Continued to work on PR to automatically populate `raw.info['bads']` when reading a raw bids file: https://github.com/mne-tools/mne-bids/pull/209
     - now also fixes an issue with wrong assumptions on `events.tsv` files: https://github.com/mne-tools/mne-bids/issues/202
     - furthermore simplifies `read_raw_bids` by dropping optional event outputs and using `mne.Annotations` instead
+- spent some time working on BIDS smaller issues
+    - https://github.com/bids-standard/bids-specification/pull/250
+    - https://github.com/bids-standard/bids-specification/pull/249
 
 Thursday, 2019-06-20
 ---------------------
