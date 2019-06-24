@@ -1,5 +1,28 @@
+Week 5
+======
+
+Monday, 2019-06-24
+------------------
+- figured out that testing `master` version of `bids-validator` might not be possible under Windows: https://github.com/bids-standard/bids-validator/issues/790#issuecomment-505085605
+- overhauled MEG test suite in BIDS-validator: https://github.com/bids-standard/bids-validator/pull/789
+- inquired about KRISS MEG data: https://github.com/bids-standard/bids-specification/issues/253
+- performed lots of detective work into Unix and Windows flow of the `bids-validator`: https://github.com/bids-standard/bids-validator/issues/790
+- repaired and improved Travis CI for mne-bids: Can now easily switch between master and development: https://github.com/mne-tools/mne-bids/pull/209/commits/a7dd5cd5336b70f21c66f50c060c2c937b8f01c2
+- learned about `pushd` and `popd`
+- Discussion on BIDS-validator with @robertoostenveld and @jasmainak: https://github.com/bids-standard/bids-validator/pull/789#discussion_r296620618
+- wrote weekly GSoC blogpost: https://blogs.python-gsoc.org/en/blogs/sappelhoffs-blog/fourth-week-of-gsoc-second-half-of-short-gsoc-pause-due-to-summer-school-and-getting-back-to-work-issues-with-the-bids-validator/
+
+
 Week 4
 ======
+
+Sunday, 2019-06-23
+------------------
+- enjoyed free time :)
+
+Saturday, 2019-06-22
+--------------------
+- enjoyed free time :)
 
 Friday, 2019-06-21
 ---------------------
