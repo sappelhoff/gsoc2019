@@ -1,6 +1,14 @@
 Week 5
 ======
 
+Tuesday, 2019-06-24
+-------------------
+- started to work on a PR that will allow automatic computation of `*.trans` files
+- finished PR on auto populating bads in mne-bids: https://github.com/mne-tools/mne-bids/pull/209
+- finished work on BIDS-validator MEG update: https://github.com/bids-standard/bids-validator/pull/789
+- worked on missing KRISS example: https://github.com/bids-standard/bids-specification/issues/253
+- performed the first GSoC evaluation
+
 Monday, 2019-06-24
 ------------------
 - figured out that testing `master` version of `bids-validator` might not be possible under Windows: https://github.com/bids-standard/bids-validator/issues/790#issuecomment-505085605
