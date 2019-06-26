@@ -1,7 +1,13 @@
 Week 5
 ======
 
-Tuesday, 2019-06-24
+Wednesday, 2019-06-26
+-------------------
+- prepared a PR to improve MNE-Python docs on coregistration: https://github.com/mne-tools/mne-python/pull/6494
+- got stuck on how to extract NAS, LPA, and RPA from NIfTI: https://github.com/mne-tools/mne-bids/issues/210#issuecomment-505853087
+- improved `setup.py` of autoreject: https://github.com/autoreject/autoreject/pull/149 
+
+Tuesday, 2019-06-25
 -------------------
 - started to work on a PR that will allow automatic computation of `*.trans` files
 - finished PR on auto populating bads in mne-bids: https://github.com/mne-tools/mne-bids/pull/209
