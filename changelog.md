@@ -3,6 +3,10 @@ Week 6
 
 Monday, 2019-07-01
 ------------------
+- implemented roundtrip testing for coordinate systems PR, ready to focus on an example and a final review
+- reviewed slideshow by Mainak for upcoming MNE-BIDS presentation
+- opened issue on Neurostars to inquire for getting transformations from NIfTI: https://neurostars.org/t/get-voxel-to-ras-transformation-from-nifti-file/4549
+- verified visually that conversion of coords is working: https://gitter.im/mne-tools/mne-gsoc-2019-BIDS?at=5d1a076f2be6a2404d006e33
 - continued work on coordinate systems PR: https://github.com/mne-tools/mne-bids/pull/211
 
 Week 5
