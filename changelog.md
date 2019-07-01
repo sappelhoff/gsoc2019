@@ -1,11 +1,35 @@
+Week 6
+======
+
+Monday, 2019-07-01
+------------------
+- continued work on coordinate systems PR: https://github.com/mne-tools/mne-bids/pull/211
+
 Week 5
 ======
 
+Sunday, 2019-06-30
+------------------
+- wrote blog post for Python Software Foundation: https://blogs.python-gsoc.org/en/blogs/sappelhoffs-blog/fifth-week-of-gsoc-coordinate-systems-and-transformations/
+
+Saturday, 2019-06-29
+--------------------
+- enjoyed free time :)
+
+Friday, 2019-06-28
+------------------
+- prepared a PR in mne-bids to write T1 weighted MRI data and reconstruct `trans`: https://github.com/mne-tools/mne-bids/pull/211
+
+Thursday, 2019-06-27
+--------------------
+- wrote code to get MRI-landmarks from `trans` and MEG-landmarks: https://github.com/mne-tools/mne-bids/issues/210#issuecomment-506374317
+- continued work on docs for source alignment: https://github.com/mne-tools/mne-python/pull/6494
+
 Wednesday, 2019-06-26
--------------------
+---------------------
 - prepared a PR to improve MNE-Python docs on coregistration: https://github.com/mne-tools/mne-python/pull/6494
 - got stuck on how to extract NAS, LPA, and RPA from NIfTI: https://github.com/mne-tools/mne-bids/issues/210#issuecomment-505853087
-- improved `setup.py` of autoreject: https://github.com/autoreject/autoreject/pull/149 
+- improved `setup.py` of autoreject: https://github.com/autoreject/autoreject/pull/149
 
 Tuesday, 2019-06-25
 -------------------
