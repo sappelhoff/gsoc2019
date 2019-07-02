@@ -1,6 +1,14 @@
 Week 6
 ======
 
+Tuesday, 2019-07-02
+-------------------
+- opened an issue on test refactoring in MNE-BIDS: https://github.com/mne-tools/mne-bids/issues/212
+- worked on coordinate system PR
+  - improved coverage
+  - went over reviews
+  - finished the example: https://github.com/mne-tools/mne-bids/pull/211/commits/665570e70afe0c6c987a0c41363eb05a29baa2c5
+
 Monday, 2019-07-01
 ------------------
 - implemented roundtrip testing for coordinate systems PR, ready to focus on an example and a final review
