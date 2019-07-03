@@ -1,6 +1,11 @@
 Week 6
 ======
 
+Wednesday, 2019-07-03
+---------------------
+- finalized coordinate system PR
+- addressed reviewer comments for coordinate system PR
+
 Tuesday, 2019-07-02
 -------------------
 - opened an issue on test refactoring in MNE-BIDS: https://github.com/mne-tools/mne-bids/issues/212
