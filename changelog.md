@@ -1,6 +1,13 @@
 Week 6
 ======
 
+Thursday, 2019-07-04
+--------------------
+- opened issues for MNE-BIDS
+  - allow reading fiducials for write_anat also from a coordsystem.json: https://github.com/mne-tools/mne-bids/issues/214
+  - homogenize use of `output_path` and `bids_root`: https://github.com/mne-tools/mne-bids/issues/213
+- improved testing for coordinate system PR and finally got it merged: https://github.com/mne-tools/mne-bids/pull/211
+
 Wednesday, 2019-07-03
 ---------------------
 - finalized coordinate system PR
