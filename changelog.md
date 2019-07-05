@@ -1,6 +1,10 @@
 Week 6
 ======
 
+Friday, 2019-07-05
+------------------
+- Responded to MNE-Python issue related to BrainVision files: https://github.com/mne-tools/mne-python/pull/6525
+
 Thursday, 2019-07-04
 --------------------
 - opened issues for MNE-BIDS
