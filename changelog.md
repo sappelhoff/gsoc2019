@@ -1,6 +1,13 @@
 Week 6
 ======
 
+Friday, 2019-07-05
+------------------
+- responded to MNE-Python issue related to BrainVision files: https://github.com/mne-tools/mne-python/pull/6525
+- prepared a PR to pybids, fixing pep8 while going through codebase: https://github.com/bids-standard/pybids/pull/456
+- prepared a WIP PR to mne-study-template to better discuss whether it makes more sense to start from scratch: https://github.com/mne-tools/mne-study-template/pull/35
+- gained access to a cluster, where I now run Freesurfer to finalize the PR on somato data: https://github.com/bids-standard/bids-specification/pull/207
+
 Thursday, 2019-07-04
 --------------------
 - opened issues for MNE-BIDS
