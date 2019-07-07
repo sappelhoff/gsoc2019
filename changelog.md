@@ -1,5 +1,20 @@
+Week 7
+======
+
+Monday, 2019-07-08
+------------------
+- tbd
+
 Week 6
 ======
+
+Sunday, 2019-07-07
+------------------
+- wrote blog post for Python Software Foundation: https://blogs.python-gsoc.org/en/blogs/sappelhoffs-blog/sixth-week-of-gsoc-on-taking-breaks-and-abstaining-from-rewriting-old-code/
+
+Saturday, 2019-07-06
+--------------------
+- enjoyed free time :)
 
 Friday, 2019-07-05
 ------------------
