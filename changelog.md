@@ -1,9 +1,17 @@
 Week 7
 ======
 
+Tuesday, 2019-07-09
+-------------------
+- prepared a bugfix to mne-bids: https://github.com/mne-tools/mne-bids/pull/217
+- worked on mne-study-template: https://github.com/mne-tools/mne-study-template/pull/35
+- figured out a way to link to dev version of docs in mne-bids: https://github.com/mne-tools/mne-bids/issues/215
+
 Monday, 2019-07-08
 ------------------
-- tbd
+- worked on mne-study-template: https://github.com/mne-tools/mne-study-template/pull/35
+- finished PR on pybids: https://github.com/bids-standard/pybids/pull/456
+- investigated problems with freesurfer and its MNE bindings
 
 Week 6
 ======
