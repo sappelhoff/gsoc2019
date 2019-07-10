@@ -1,6 +1,12 @@
 Week 7
 ======
 
+Wednesday, 2019-07-10
+---------------------
+- opened an issue on improving the CLI of mne-bids: https://github.com/mne-tools/mne-bids/issues/220
+- prepared an issue and started corresponding PR to improve read_raw_bids: https://github.com/mne-tools/mne-bids/pull/219
+- continued work on makin mne-study-template BIDS compatible: https://github.com/mne-tools/mne-study-template/pull/35
+
 Tuesday, 2019-07-09
 -------------------
 - prepared a bugfix to mne-bids: https://github.com/mne-tools/mne-bids/pull/217
