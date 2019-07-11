@@ -1,6 +1,15 @@
 Week 7
 ======
 
+Thursday, 2019-07-11
+--------------------
+- continued to work on PR setting channel types from channels.tsv in read_raw_bids: https://github.com/mne-tools/mne-bids/pull/219
+- reported an MNE-Python issue and proposed a solution: https://github.com/mne-tools/mne-python/issues/6557
+- replied to MNE-Python issue: https://github.com/mne-tools/mne-python/issues/6556
+- wasted lots of time trying to get rid of warnings in our testing suite such as:
+  - `FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison`
+  - `numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject`
+
 Wednesday, 2019-07-10
 ---------------------
 - opened an issue on improving the CLI of mne-bids: https://github.com/mne-tools/mne-bids/issues/220
