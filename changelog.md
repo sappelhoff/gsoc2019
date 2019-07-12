@@ -1,6 +1,22 @@
 Week 7
 ======
 
+Sunday, 2019-07-14
+------------------
+- tbd
+
+Saturday, 2019-07-13
+--------------------
+- tbd
+
+Friday, 2019-07-12
+------------------
+- did some user support for mne-bids:
+  - https://github.com/mne-tools/mne-bids/issues/224
+  - https://github.com/mne-tools/mne-bids/issues/223
+- opened an issue, discussing a dedicated example to read_raw_bids: https://github.com/mne-tools/mne-bids/issues/222
+- addressed reviews to automatically setting channel types: https://github.com/mne-tools/mne-bids/pull/219
+
 Thursday, 2019-07-11
 --------------------
 - continued to work on PR setting channel types from channels.tsv in read_raw_bids: https://github.com/mne-tools/mne-bids/pull/219
