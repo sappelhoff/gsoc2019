@@ -7,7 +7,8 @@ Sunday, 2019-07-14
 
 Saturday, 2019-07-13
 --------------------
-- tbd
+- started PR on improving the CLI of mne-bids: https://github.com/mne-tools/mne-bids/pull/225
+- finalized PR: https://github.com/mne-tools/mne-bids/pull/219
 
 Friday, 2019-07-12
 ------------------
