@@ -3,7 +3,8 @@ Week 7
 
 Sunday, 2019-07-14
 ------------------
-- tbd
+- wrote blog post: https://blogs.python-gsoc.org/en/blogs/sappelhoffs-blog/seventh-week-of-gsoc-just-a-status-report/
+- did some work on mne-bids docs: https://gitter.im/mne-tools/mne-gsoc-2019-BIDS?at=5d2ae51eeab6cd7763668bdb
 
 Saturday, 2019-07-13
 --------------------
@@ -31,7 +32,7 @@ Wednesday, 2019-07-10
 ---------------------
 - opened an issue on improving the CLI of mne-bids: https://github.com/mne-tools/mne-bids/issues/220
 - prepared an issue and started corresponding PR to improve read_raw_bids: https://github.com/mne-tools/mne-bids/pull/219
-- continued work on makin mne-study-template BIDS compatible: https://github.com/mne-tools/mne-study-template/pull/35
+- continued work on making mne-study-template BIDS compatible: https://github.com/mne-tools/mne-study-template/pull/35
 
 Tuesday, 2019-07-09
 -------------------
