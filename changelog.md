@@ -21,7 +21,14 @@ Tuesday, 2019-07-16
 
 Monday, 2019-07-15
 ------------------
+- Make `write_anat` and `get_head_mri_trans` more robust: https://github.com/mne-tools/mne-bids/pull/227
+- did user support for mne-bids: https://github.com/mne-tools/mne-bids/issues/224#issuecomment-511398178
+- integrated and tested Alex's work on mne-study-template
+- finished PR to enable cli for copyfile functions and automatically generate docs for it: https://github.com/mne-tools/mne-bids/pull/225
+- prepared a PR to MNE-Python to make the opt_parser more versatile: https://github.com/mne-tools/mne-python/pull/6572
 - fixed a bug in MNE-Python for BrainVision data format: https://github.com/mne-tools/mne-python/pull/6571
+  - also contacted Brain Products to find some explanation of whether this is an issue with a software of the recording device
+  - also did the user support on the mailing list: https://mail.nmr.mgh.harvard.edu/pipermail//mne_analysis/2019-July/005996.html
 
 Week 7
 ======
