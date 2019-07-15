@@ -1,3 +1,28 @@
+Week 8
+======
+
+Sunday, 2019-07-21
+------------------
+
+Saturday, 2019-07-20
+--------------------
+
+Friday, 2019-07-19
+------------------
+
+Thursday, 2019-07-118
+--------------------
+
+Wednesday, 2019-07-17
+---------------------
+
+Tuesday, 2019-07-16
+-------------------
+
+Monday, 2019-07-15
+------------------
+- fixed a bug in MNE-Python for BrainVision data format: https://github.com/mne-tools/mne-python/pull/6571
+
 Week 7
 ======
 
