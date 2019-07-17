@@ -15,9 +15,20 @@ Thursday, 2019-07-118
 
 Wednesday, 2019-07-17
 ---------------------
+- fixed handling of NA data in mne-bids: https://github.com/mne-tools/mne-bids/pull/234
+- worked on the mne-study-template
+- worked a bit on pybv as related to MNE-BIDS: https://github.com/bids-standard/pybv/pulls/25
+- did user support and reviews for MNE-BIDS:
+  - https://github.com/mne-tools/mne-bids/issues/229
+  - https://github.com/mne-tools/mne-bids/pull/231
+  - https://github.com/mne-tools/mne-bids/issues/229
+  - https://github.com/mne-tools/mne-bids/issues/232
+  - https://github.com/mne-tools/mne-bids/pull/233
 
 Tuesday, 2019-07-16
 -------------------
+- did only minor maintenance, testing, and integration work
+
 
 Monday, 2019-07-15
 ------------------
