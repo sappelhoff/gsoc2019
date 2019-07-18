@@ -12,6 +12,12 @@ Friday, 2019-07-19
 
 Thursday, 2019-07-118
 --------------------
+- fixed pybv issue to make it fit for MNE 0.18+ ... for better integration into MNE-BIDS:
+  - also involved sending an Email to BrainProducts to find, if MNE-Python has a buggy
+    or valid behavior for reading events from annotations: 3 digits are assumed, but is that OK?: https://github.com/mne-tools/mne-python/blob/a7b39388b3f5225df554cd7cf770a80b0136fe94/mne/io/brainvision/brainvision.py#L828-L829
+- reported new potential pybv issue: https://github.com/bids-standard/pybv/issues/27
+- user support and reviewing:
+  - https://github.com/mne-tools/mne-bids/pull/236
 
 Wednesday, 2019-07-17
 ---------------------
@@ -28,7 +34,6 @@ Wednesday, 2019-07-17
 Tuesday, 2019-07-16
 -------------------
 - did only minor maintenance, testing, and integration work
-
 
 Monday, 2019-07-15
 ------------------
