@@ -9,6 +9,12 @@ Saturday, 2019-07-20
 
 Friday, 2019-07-19
 ------------------
+- worked on mne-study-template: https://github.com/mne-tools/mne-study-template/pull/35/commits/6f8502f9ce6980a6c80fc7d126b5f05fe4621fba
+- finished PR: https://github.com/mne-tools/mne-bids/pull/234
+- user support, reviews, issue comments around MNE-BIDS, BIDS, and BrainVision:
+  - https://github.com/mne-tools/mne-bids/issues/240
+  - https://github.com/bids-standard/pybv/issues/28
+  - https://github.com/bids-standard/bids-specification/issues/276
 
 Thursday, 2019-07-118
 --------------------
