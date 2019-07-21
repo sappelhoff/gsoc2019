@@ -1,11 +1,43 @@
+Week 9
+======
+
+Sunday, 2019-07-28
+------------------
+
+Saturday, 2019-07-27
+--------------------
+
+Friday, 2019-07-26
+------------------
+
+Thursday, 2019-07-25
+--------------------
+
+Wednesday, 2019-07-24
+---------------------
+
+
+Tuesday, 2019-07-23
+-------------------
+
+Monday, 2019-07-22
+------------------
+
 Week 8
 ======
 
 Sunday, 2019-07-21
 ------------------
+- wrote weekly blog post: https://blogs.python-gsoc.org/en/sappelhoffs-blog/eighth-week-of-gsoc-mixed-tasks-and-progress
+- made a PR to pybv, allow writing of meas_date, and fix indexing bug: https://github.com/bids-standard/pybv/pull/29
+- tested bids-validator issue in Mainak's PR and opened an issue on bids-validator repo: https://github.com/bids-standard/bids-validator/issues/803
+- continues inquiring the mystery of BrainVision coordinates: https://github.com/mne-tools/mne-python/pull/6402#discussion_r305619808
 
 Saturday, 2019-07-20
 --------------------
+- investigated mystery why BrainVision coordinates are multiplied by a factor of 85. Relevant for MNE-BIDS coordinate handling: https://github.com/mne-tools/mne-python/pull/4109#issuecomment-513444467
+- critically went through MNE-Python proposal to improve ICA docs: https://github.com/mne-tools/mne-python/issues/6588
+- reviewed PR for improving/fixing MNE-BIDS write_anat: https://github.com/mne-tools/mne-bids/pull/241
 
 Friday, 2019-07-19
 ------------------
@@ -16,7 +48,7 @@ Friday, 2019-07-19
   - https://github.com/bids-standard/pybv/issues/28
   - https://github.com/bids-standard/bids-specification/issues/276
 
-Thursday, 2019-07-118
+Thursday, 2019-07-18
 --------------------
 - fixed pybv issue to make it fit for MNE 0.18+ ... for better integration into MNE-BIDS:
   - also involved sending an Email to BrainProducts to find, if MNE-Python has a buggy
