@@ -22,6 +22,8 @@ Tuesday, 2019-07-23
 
 Monday, 2019-07-22
 ------------------
+- updated somato PR to comply with new structure: https://github.com/mne-tools/mne-python/pull/6414
+  - also started running `recon-all` ... when ready, we can finalize the somato conversion by uploading to OSF
 - updated the convert_somato_dataset notebook: https://github.com/sappelhoff/gsoc2019/blob/master/misc_notebooks/convert_somato_data.ipynb
 - prepared a PR to enhance mne-bids read_raw_bids functionality: https://github.com/mne-tools/mne-bids/pull/244
 - prepared a PR to fix an mne-bids example: https://github.com/mne-tools/mne-bids/pull/243
