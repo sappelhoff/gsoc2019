@@ -22,6 +22,10 @@ Tuesday, 2019-07-23
 
 Monday, 2019-07-22
 ------------------
+- updated the convert_somato_dataset notebook: https://github.com/sappelhoff/gsoc2019/commit/98d73621de532980c796bafe5cba82ce9e9de7b8
+- prepared a PR to enhance mne-bids read_raw_bids functionality: https://github.com/mne-tools/mne-bids/pull/244
+- prepared a PR to fix an mne-bids example: https://github.com/mne-tools/mne-bids/pull/243
+- reviewed Mainak's NifTI header PR: https://github.com/mne-tools/mne-bids/pull/241
 
 Week 8
 ======
