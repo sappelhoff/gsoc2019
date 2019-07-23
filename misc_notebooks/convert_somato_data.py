@@ -6,7 +6,7 @@ The python dependencies to run this script are:
 - numpy
 - scipy
 - mne<0.19
-- mne-bids
+- mne-bids>0.2
 - nibabel
 
 Notes on freesurfer
@@ -52,8 +52,9 @@ from mne_bids.utils import print_dir_tree
 somato_path = somato.data_path()
 
 # Print the directory tree
+print('\nSomato data before conversion:\n')
+print_dir_tree(somato_path, maxdepth=3)
 print('\n\n')
-print_dir_tree(somato_path)
 
 # Convert to BIDS
 # Path to the raw data of somato dataset
@@ -216,5 +217,6 @@ fpath = op.realpath(__file__)
 sh.copyfile(fpath, op.join(code_dir, basename))
 
 # And show what the converted data look like
-print('\n\n')
+print('\nSomato BIDS data:\n')
 print_dir_tree(somato_path_bids)
+print('\n\n')
