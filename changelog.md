@@ -19,6 +19,10 @@ Wednesday, 2019-07-24
 
 Tuesday, 2019-07-23
 -------------------
+- finished conversion script for somato data and made PR to mne-scripts: https://github.com/mne-tools/mne-scripts/pull/20
+- made a PR to improve `print_dir_tree` functionality in mne-bids: https://github.com/mne-tools/mne-bids/pull/245
+- made a new release of pybv: https://twitter.com/stefanappelhoff/status/1153660293672833025
+- made the second GSoC evaluation
 
 Monday, 2019-07-22
 ------------------
