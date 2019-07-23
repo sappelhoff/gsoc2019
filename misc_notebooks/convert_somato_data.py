@@ -49,13 +49,15 @@ from mne_bids import write_raw_bids, make_bids_basename, write_anat
 from mne_bids.utils import print_dir_tree
 
 # Somato data prior to conversion
+somato_path = somato.data_path()
+
 # Print the directory tree
 print('\n\n')
-print_dir_tree(somato.data_path())
+print_dir_tree(somato_path)
 
 # Convert to BIDS
 # Path to the raw data of somato dataset
-fif_path = op.join(somato.data_path(), 'MEG', 'somato')
+fif_path = op.join(somato_path, 'MEG', 'somato')
 
 # Load the raw data file
 raw = mne.io.read_raw_fif(op.join(fif_path, 'sef_raw_sss.fif'))
@@ -77,15 +79,16 @@ print('event_id: "{}"'.format(event_id))
 bids_basename = make_bids_basename(subject='01', task='somato')
 
 # Make a location for the BIDS formatted data
-somato_parent, somato_name = op.split(somato.data_path())
-output_path = op.join(somato_parent, somato_name + '-bids')
+somato_parent, somato_name = op.split(somato_path)
+somato_path_bids = op.join(somato_parent, somato_name + '-bids')
 
 # Write the data
-write_raw_bids(raw, bids_basename, output_path, events, event_id,
+write_raw_bids(raw, bids_basename, somato_path_bids, events, event_id,
                overwrite=True)
 
 # Edit dataset_description.json to include link to dataset
-dataset_description_json = op.join(output_path, 'dataset_description.json')
+dataset_description_json = op.join(somato_path_bids,
+                                   'dataset_description.json')
 with open(dataset_description_json, 'r') as fin:
     jsondict = json.load(fin)
 
@@ -103,21 +106,21 @@ with open(dataset_description_json, 'w') as fout:
 
 # Write anatomical data to BIDS
 # we take the original T1 from the freesurfer directory
-t1w = op.join(somato.data_path(), 'subjects', 'somato', 'mri', 'T1.mgz')
+t1w = op.join(somato_path, 'subjects', 'somato', 'mri', 'T1.mgz')
 
 # we also take the trans file, and use it to write the coordinates of
 # anatomical landmarks to a T1w.json file
-trans = op.join(somato.data_path(), 'MEG', 'somato', 'sef_raw_sss-trans.fif')
+trans = op.join(somato_path, 'MEG', 'somato', 'sef_raw_sss-trans.fif')
 
 # Copy over the MRI, convert it to NIfTI format, and write the anatomical
 # landmarks in voxel coordinates
-write_anat(output_path, subject='01', t1w=t1w, trans=trans, raw=raw,
+write_anat(somato_path_bids, subject='01', t1w=t1w, trans=trans, raw=raw,
            overwrite=True, verbose=True)
 
 # Add derivatives
 # some files cannot be specified in BIDS yet. We add these to derivatives
 # General derivatives directory
-derivatives_dir = op.join(output_path, 'derivatives')
+derivatives_dir = op.join(somato_path_bids, 'derivatives')
 if not op.exists(derivatives_dir):
     os.makedirs(derivatives_dir)
 
@@ -141,7 +144,7 @@ if not op.exists(forward_dir):
     os.makedirs(forward_dir)
 
 # copy it, overwriting old if it's there
-old_forward = op.join(somato.data_path(), 'MEG', 'somato',
+old_forward = op.join(somato_path, 'MEG', 'somato',
                       'somato-meg-oct-6-fwd.fif')
 bids_forward = op.join(forward_dir, 'sub-01_task-somato-fwd.fif')
 sh.copyfile(old_forward, bids_forward)
@@ -178,13 +181,13 @@ somato data to BIDS format. This needed to be done to change the "somato"
 subject name to the BIDS subject label "01".
 """
 
-main_readme_fname = op.join(output_path, 'README')
+main_readme_fname = op.join(somato_path_bids, 'README')
 
 with open(main_readme_fname, 'w') as fout:
     print(main_readme, file=fout)  # noqa
 
 # Prepare a /code directory and write a README
-code_dir = op.join(output_path, 'code')
+code_dir = op.join(somato_path_bids, 'code')
 if not op.exists(code_dir):
     os.makedirs(code_dir)
 
@@ -214,4 +217,4 @@ sh.copyfile(fpath, op.join(code_dir, basename))
 
 # And show what the converted data look like
 print('\n\n')
-print_dir_tree(output_path)
+print_dir_tree(somato_path_bids)
