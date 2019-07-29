@@ -1,21 +1,133 @@
+Week 13
+=======
+
+Sunday, 2019-08-25
+------------------
+
+Saturday, 2019-08-24
+--------------------
+
+Friday, 2019-08-23
+------------------
+
+Thursday, 2019-08-22
+--------------------
+
+Wednesday, 2019-08-31
+---------------------
+
+Tuesday, 2019-08-20
+-------------------
+
+Monday, 2019-08-19
+------------------
+
+Week 12
+=======
+
+Sunday, 2019-08-18
+------------------
+
+Saturday, 2019-08-17
+--------------------
+
+Friday, 2019-08-16
+------------------
+
+Thursday, 2019-08-15
+--------------------
+
+Wednesday, 2019-08-14
+---------------------
+
+Tuesday, 2019-08-13
+-------------------
+
+Monday, 2019-08-12
+------------------
+
+Week 11
+=======
+
+Sunday, 2019-08-11
+------------------
+
+Saturday, 2019-08-10
+--------------------
+
+Friday, 2019-08-09
+------------------
+
+Thursday, 2019-08-08
+--------------------
+
+Wednesday, 2019-08-07
+---------------------
+
+Tuesday, 2019-08-06
+-------------------
+
+Monday, 2019-08-05
+------------------
+
+Week 10
+=======
+
+Sunday, 2019-08-04
+------------------
+
+Saturday, 2019-08-03
+--------------------
+
+Friday, 2019-08-02
+------------------
+
+Thursday, 2019-08-01
+--------------------
+
+Wednesday, 2019-07-31
+---------------------
+
+Tuesday, 2019-07-30
+-------------------
+
+Monday, 2019-07-29
+------------------
+- fixed a typo in mne-scripts: https://github.com/mne-tools/mne-scripts/pull/21
+- finished somato PR and uploaded new data to OSF: https://github.com/mne-tools/mne-python/pull/6414
+- wrote weekly blog post: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 Week 9
 ======
 
 Sunday, 2019-07-28
 ------------------
+- enjoyed some free time :-)
 
 Saturday, 2019-07-27
 --------------------
+- enjoyed some free time :-)
 
 Friday, 2019-07-26
 ------------------
+- reviewed a PR on MNE-Python for ICA: https://github.com/mne-tools/mne-python/pull/6596
 
 Thursday, 2019-07-25
 --------------------
+- reverted some changes, and incorporated others for the somato conversion script: https://github.com/mne-tools/mne-scripts/pull/20/commits/023c457ed47181443cbf1fd39f223ec6f5098d76
+  - final test running now, hopefully finished tomorrow
+- finalized update of MNE-sample-data and provided it for Mainak to upload: https://gitter.im/mne-tools/mne-gsoc-2019-BIDS?at=5d3975409114f065e2c6455e
+- Skype call with Mainak to dicuss current status and what's up next
 
 Wednesday, 2019-07-24
 ---------------------
-
+- solved the coordinates mystery: https://github.com/mne-tools/mne-python/pull/6600
+- improved issue for BIDS electrodes and coordsystems: https://github.com/bids-standard/bids-validator/issues/672#issuecomment-514599169
+- addressed reviews to previous PR on enhancing read_raw_bids: https://github.com/mne-tools/mne-bids/pull/244
+- improved help and usage of CLI in mne-bids: https://github.com/mne-tools/mne-bids/pull/247
+- fixed an example on mne-bids: https://github.com/mne-tools/mne-bids/pull/246
+- opened an issue on MNE-Python for freesurfer related: https://github.com/mne-tools/mne-python/issues/6597
+  - and opened a PR to fix it: https://github.com/mne-tools/mne-python/pull/6598
 
 Tuesday, 2019-07-23
 -------------------
