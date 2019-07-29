@@ -95,7 +95,7 @@ Monday, 2019-07-29
 ------------------
 - fixed a typo in mne-scripts: https://github.com/mne-tools/mne-scripts/pull/21
 - finished somato PR and uploaded new data to OSF: https://github.com/mne-tools/mne-python/pull/6414
-- wrote weekly blog post: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+- wrote weekly blog post: https://blogs.python-gsoc.org/en/sappelhoffs-blog/ninth-week-of-gsoc
 
 Week 9
 ======
