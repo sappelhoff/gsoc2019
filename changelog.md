@@ -84,9 +84,11 @@ Friday, 2019-08-02
 
 Thursday, 2019-08-01
 --------------------
+- Laptop restored
 
 Wednesday, 2019-07-31
 ---------------------
+- Laptop broke down, very unproductive day
 - finished bugfix PR to MNE-Python: https://github.com/mne-tools/mne-python/pull/6611
 
 Tuesday, 2019-07-30
