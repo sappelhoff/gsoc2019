@@ -87,12 +87,24 @@ Thursday, 2019-08-01
 
 Wednesday, 2019-07-31
 ---------------------
+- finished bugfix PR to MNE-Python: https://github.com/mne-tools/mne-python/pull/6611
 
 Tuesday, 2019-07-30
 -------------------
+- continued working on the CI for mne-study-template
+  - looked into datalad and OSF integration to get matchingpennies as git annex dataset: https://github.com/templateflow/datalad-osf/issues/1
+- tried to reupload the updated MNE-sample-data (ds000248) to OpenNeuro
+  - reported problems with installing the CLI: https://github.com/OpenNeuroOrg/openneuro/issues/1220
+  - reported problems with the actual upload: https://github.com/OpenNeuroOrg/openneuro/issues/1221
 
 Monday, 2019-07-29
 ------------------
+- found a way to better search OpenNeuro (via Chris M. from Poldracklab): https://docs.google.com/spreadsheets/d/1rsVlKg0vBzkx7XUGK4joky9cM8umtkQRpJ2Y-5d6x7c/
+- prepared a PR to MNE-Python to fix BrainVision date string reading: https://github.com/mne-tools/mne-python/pull/6611
+- started CI implementation for mne-study-template: https://github.com/sappelhoff/mne-study-template/pull/1
+  - involving datalad issues
+  - involving OpenNeuro issues: https://github.com/OpenNeuroOrg/datalad-service/issues/81#issuecomment-515992625
+- continued discussion in: https://github.com/mne-tools/mne-bids/pull/244
 - fixed a typo in mne-scripts: https://github.com/mne-tools/mne-scripts/pull/21
 - finished somato PR and uploaded new data to OSF: https://github.com/mne-tools/mne-python/pull/6414
 - wrote weekly blog post: https://blogs.python-gsoc.org/en/sappelhoffs-blog/ninth-week-of-gsoc
