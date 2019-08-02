@@ -81,10 +81,17 @@ Saturday, 2019-08-03
 
 Friday, 2019-08-02
 ------------------
+- prepared a PR for a dataset fetcher for eeg_matchingpennies dataset: https://github.com/mne-tools/mne-bids/pull/249
+- prepared a PR to expose private function in MNE-Python: https://github.com/mne-tools/mne-python/pull/6624
+- worked on mne-study-template
+  - identified remaining issues with ds0000117: https://github.com/mne-tools/mne-python/issues/6621
+- prepared a PR to MNE-Python to parametrize BV date tests and use fixtures: https://github.com/mne-tools/mne-python/pull/6623
+- make import policy im mne-bids PEP8 compliant and consistent: https://github.com/mne-tools/mne-bids/pull/248
 
 Thursday, 2019-08-01
 --------------------
 - Laptop restored
+- worked on test suite for BrainVision
 
 Wednesday, 2019-07-31
 ---------------------
