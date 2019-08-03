@@ -75,9 +75,17 @@ Week 10
 
 Sunday, 2019-08-04
 ------------------
+- wrote blog post: 
 
 Saturday, 2019-08-03
 --------------------
+- re-uploaded MNE-sample-data to bids-examples repository: https://github.com/bids-standard/bids-examples/pull/164
+- worked on PR for eeg_matchingpennies fetcher: https://github.com/mne-tools/mne-bids/pull/249
+- worked on making eeg_matchingpennies work via datalad, "the manual road", because osf_datalad is failing: https://github.com/templateflow/datalad-osf/issues/1#issuecomment-517743290
+- addressed reviews to several PRs
+  - BrainVision testing refactoring: https://github.com/mne-tools/mne-python/pull/6623
+  - exposing of bootstrap_ci in MNE-Python: https://github.com/mne-tools/mne-python/pull/6624
+
 
 Friday, 2019-08-02
 ------------------
