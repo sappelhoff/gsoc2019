@@ -75,7 +75,8 @@ Week 10
 
 Sunday, 2019-08-04
 ------------------
-- wrote blog post: 
+- wrote blog post: https://blogs.python-gsoc.org/en/sappelhoffs-blog/tenth-week-of-gsoc-git-annex-and-datalad
+- reviewed mne-study-template PR: https://github.com/mne-tools/mne-study-template/pull/35
 
 Saturday, 2019-08-03
 --------------------
@@ -85,7 +86,6 @@ Saturday, 2019-08-03
 - addressed reviews to several PRs
   - BrainVision testing refactoring: https://github.com/mne-tools/mne-python/pull/6623
   - exposing of bootstrap_ci in MNE-Python: https://github.com/mne-tools/mne-python/pull/6624
-
 
 Friday, 2019-08-02
 ------------------
