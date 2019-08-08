@@ -27,9 +27,11 @@ Week 12
 
 Sunday, 2019-08-18
 ------------------
+- enjoyed free time :-)
 
 Saturday, 2019-08-17
 --------------------
+- enjoyed free time :-)
 
 Friday, 2019-08-16
 ------------------
@@ -54,21 +56,40 @@ Sunday, 2019-08-11
 
 Saturday, 2019-08-10
 --------------------
+- enjoyed free time :-)
 
 Friday, 2019-08-09
 ------------------
 
 Thursday, 2019-08-08
 --------------------
+- opened new issue to make `source` and `report` work in study template: https://github.com/mne-tools/mne-study-template/issues/47
+- started to work on Mainak's PRs:
+  - https://github.com/mne-tools/mne-study-template/pull/43
+  - https://github.com/mne-tools/mne-study-template/pull/41
+- prepared a PR to comply with WIP BIDS spec on derivatives: https://github.com/mne-tools/mne-study-template/pull/46
+- finished removing the pybids dependency in mne-study-template: https://github.com/mne-tools/mne-study-template/pull/42
+- added eeg_matchingpennies to test suite of mne-study-template: https://github.com/mne-tools/mne-study-template/pull/45
 
 Wednesday, 2019-08-07
 ---------------------
+- prepared a PR to extract "kinds" (=datatypes) from a BIDS dir: https://github.com/mne-tools/mne-bids/pull/253/files
+- worked on PR for giving mne-bids a taste of pybids functionality: https://github.com/mne-tools/mne-bids/pull/252
+- improved docs for mne-bids examples and addressed review to MNE-sample-data update: https://github.com/bids-standard/bids-examples/pull/164
+- started PR to remove pybids dependency from mne-study-template: https://github.com/mne-tools/mne-study-template/pull/42
+- reviewed and merged PR for mne-study-template: https://github.com/mne-tools/mne-study-template/pull/40
 
 Tuesday, 2019-08-06
 -------------------
+- prepared PR to use mne config in mne-study-template: https://github.com/mne-tools/mne-study-template/pull/39
+- opened issue with bids-validator, which is now breaking mne-bids: https://github.com/bids-standard/bids-validator/issues/812
+- addressed review to pybids-replacement: https://github.com/mne-tools/mne-bids/pull/252
 
 Monday, 2019-08-05
 ------------------
+- discussed about BIDS anonymization of data in MNE: https://github.com/mne-tools/mne-python/issues/6621
+- reviewed a PR on MNE-Python: https://github.com/mne-tools/mne-python/pull/6628
+- prepared a PR to replace pybids: https://github.com/mne-tools/mne-bids/pull/252
 
 Week 10
 =======
