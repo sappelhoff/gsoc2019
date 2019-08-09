@@ -53,6 +53,7 @@ Week 11
 
 Sunday, 2019-08-11
 ------------------
+- wrote blog post:
 
 Saturday, 2019-08-10
 --------------------
@@ -60,6 +61,9 @@ Saturday, 2019-08-10
 
 Friday, 2019-08-09
 ------------------
+- conversion of MNE-somato-data into git-annex dataset via OSF: https://osf.io/3qmer/
+- figured out the datalad-osf issues and submitted a fix: https://github.com/templateflow/datalad-osf/pull/2
+- prepared a PR to make "make source" work: https://github.com/mne-tools/mne-study-template/pull/48
 
 Thursday, 2019-08-08
 --------------------
