@@ -53,7 +53,8 @@ Week 11
 
 Sunday, 2019-08-11
 ------------------
-- wrote blog post:
+- wrote blog post: https://blogs.python-gsoc.org/en/sappelhoffs-blog/eleventh-week-of-gsoc-some-more-datalad-complete-and-automatic-flow-now
+- wrote a wrapper script for `osfclient` to properly upload directories to OSF: https://github.com/sappelhoff/gsoc2019/blob/master/misc_code/osfclient_wrapper.py
 
 Saturday, 2019-08-10
 --------------------
