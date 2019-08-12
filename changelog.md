@@ -47,6 +47,10 @@ Tuesday, 2019-08-13
 
 Monday, 2019-08-12
 ------------------
+- looked into deprecation of datasets.py module in mne-bids
+- worked on PR to make "make source" work in study template
+- finalized MNE-somato-data git-annex repository: https://github.com/sappelhoff/MNE-somato-data
+- worked on reviews for making mne-study-template for "forkable": https://github.com/mne-tools/mne-study-template/pull/48#discussion_r312695992
 
 Week 11
 =======
@@ -55,6 +59,7 @@ Sunday, 2019-08-11
 ------------------
 - wrote blog post: https://blogs.python-gsoc.org/en/sappelhoffs-blog/eleventh-week-of-gsoc-some-more-datalad-complete-and-automatic-flow-now
 - wrote a wrapper script for `osfclient` to properly upload directories to OSF: https://github.com/sappelhoff/gsoc2019/blob/master/misc_code/osfclient_wrapper.py
+- reviewed Mainak's PR about BIDSPath class in mne-bids_ https://github.com/mne-tools/mne-bids/pull/257
 
 Saturday, 2019-08-10
 --------------------
