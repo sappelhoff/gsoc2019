@@ -41,9 +41,21 @@ Thursday, 2019-08-15
 
 Wednesday, 2019-08-14
 ---------------------
+- Worked on Coordsystems for EEG in MNE-Python:
+    - dig montage PR: https://github.com/mne-tools/mne-python/pull/6663
+    - testing-data PR: https://github.com/mne-tools/mne-testing-data/pull/49
+    - dig Montage issues:
+        - https://gitter.im/mne-tools/mne-python?at=5d54349353490e334def9859
+        - https://github.com/mne-tools/mne-bids/pull/244#discussion_r313958721
+- worked on making ds001971 pass mne-study-template: https://github.com/mne-tools/mne-study-template/pull/41
+- improved ICA error triggering in MNE-Python: https://github.com/mne-tools/mne-python/pull/6660
+- worked on making ds000246 pass mne-study-template pipeline: https://github.com/mne-tools/mne-study-template/pull/43
+- improved an error message in MNE-Python: https://github.com/mne-tools/mne-python/pull/6659
+- addressed reviews on deprecation of datasets.py module in mne-bids: https://github.com/mne-tools/mne-bids/pull/254
 
 Tuesday, 2019-08-13
 -------------------
+- worked on deprecation of datasets.py module in mne-bids: https://github.com/mne-tools/mne-bids/pull/254
 
 Monday, 2019-08-12
 ------------------
