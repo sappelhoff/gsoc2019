@@ -3,7 +3,7 @@ Week 13
 
 Sunday, 2019-08-25
 ------------------
-wrote the final check-in for GSoC: tbd
+wrote the final check-in for GSoC: https://blogs.python-gsoc.org/en/sappelhoffs-blog/thirteenth-week-of-gsoc-final-checkin
 
 Saturday, 2019-08-24
 --------------------
@@ -24,7 +24,7 @@ Tuesday, 2019-08-20
 Monday, 2019-08-19
 ------------------
 - prepared a PR for MNE-BIDS to change the naming of a function: https://github.com/mne-tools/mne-bids/pull/260
-- wrote a blog post:
+- wrote a blog post: https://blogs.python-gsoc.org/en/sappelhoffs-blog/twelveth-week-of-gsoc-getting-ready-for-the-final-week-of-gsoc
 
 Week 12
 =======
