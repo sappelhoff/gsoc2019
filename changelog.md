@@ -35,9 +35,13 @@ Saturday, 2019-08-17
 
 Friday, 2019-08-16
 ------------------
+- enjoyed free time :-)
 
 Thursday, 2019-08-15
 --------------------
+- opened issue on MNE-Python to discuss two events at same timepoint: https://github.com/mne-tools/mne-python/issues/6665
+- managed mne-bids and mne-study-template open issues and PRs
+- did some user support for MNE-Python: https://github.com/mne-tools/mne-python/issues/6613
 
 Wednesday, 2019-08-14
 ---------------------
