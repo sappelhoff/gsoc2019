@@ -3,9 +3,11 @@ Week 13
 
 Sunday, 2019-08-25
 ------------------
+wrote the final check-in for GSoC: tbd
 
 Saturday, 2019-08-24
 --------------------
+- enjoyed some free time :-)
 
 Friday, 2019-08-23
 ------------------
@@ -21,6 +23,8 @@ Tuesday, 2019-08-20
 
 Monday, 2019-08-19
 ------------------
+- prepared a PR for MNE-BIDS to change the naming of a function: https://github.com/mne-tools/mne-bids/pull/260
+- wrote a blog post:
 
 Week 12
 =======
