@@ -4,7 +4,9 @@
 
 # TL;DR (abstract)
 
-
+In my GSoC, I bridged the data standard "BIDS" and the analyis software
+"MNE-Python" to facilitate automatic data analysis in the domain of
+neuro-electrophysiology.
 
 # Description
 
@@ -46,34 +48,58 @@ determined to focus on revamping the existing
 [mne-study-template](https://github.com/mne-tools/mne-study-template)
 to draw on BIDS.
 
-What is the MNE-study-template?
+The mne-study-template is a set of processing files that form a complete
+pipeline for automatic processing of MEG and EEG datasets.
+So far, the study template had relied on some unspecified data structure, that
+was still relatively rigid. Through BIDS, the expected input for the study
+template can become much more transparent ... and the code base can be
+significantly reduced through reading the data from metadata files that we
+know MUST be present in BIDS.
 
-This involed
+Preparing the mne-study-template to be BIDS compatible involved several key
+points, such as:
 
 - preparing testing datasets
 - testing CI setups
+- working on the study-template itself
 - changes to MNE-BIDS and MNE-Python along the way
 
-As an outcome, the mne-study-template is now usable ... mne-bids 0.3 is released
-and lots of other benefical outcomes are usable to the community at large.
+All of these points have been part of my GSoC, and as an outcome of the overall
+project work, the mne-study-template is now usable with BIDS
+formatted data, MNE-BIDS version 0.3 is released, and lots of other benefical
+outcomes are usable to the community at large.
 
 # Usable outcomes: **Highlights**
 
-Here I list
-- MNE-BIDS
+Here I list the highlights of my contributions in several projects that are
+interrelated. Somewhat ordered by importance (but feel free to disagree!)
 
-- mne-study-template
+- **[mne-study-template](https://github.com/mne-tools/mne-study-template)**
     - datasets (datalad + git-annex)
     - CI with circleci
 
-- mne-python
 
-- Pybv
+- **[mne-bids](https://github.com/mne-tools/mne-bids)**
   - release
 
-- autoreject
 
-- bids-validator
+- **[mne-python](https://github.com/mne-tools/mne-python)**
+  - BrainVision CapTrack
+  - somato data now in BIDS
+
+
+- **[pybv](https://github.com/bids-standard/pybv)**
+  - release
+  - bug fixes for indexing
+
+
+- **[autoreject](https://github.com/autoreject/autoreject)**
+  - overhaul CI
+  - improve docs
+
+
+- **[bids-validator](https://github.com/bids-validator/bids-validator)**
+  - x
 
 # Unfinished business
 
@@ -84,7 +110,10 @@ or even myself at the next convenient time.
 As before, this is not an exhaustive list, it merely highlights the most
 pressing issues.
 
-1. a
+1. MNE-Python has the "reports" feature that can provide html reports for
+   analysis steps that have been run. This feature should be integrated into
+   the mne-study-template, but it's not working so far.
+   (issue [#47](https://github.com/mne-tools/mne-study-template/issues/47))
 1. b
 1. c
 
@@ -97,6 +126,9 @@ top of the document.
 
 The document can be found in this repository:
 [changelog.md](https://github.com/sappelhoff/gsoc2019/blob/master/changelog.md)
+
+The blog that I wrote during my GSoC can be found
+[here](https://blogs.python-gsoc.org/en/sappelhoffs-blog/).
 
 # Acknowledgements
 
