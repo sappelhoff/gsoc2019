@@ -110,12 +110,24 @@ or even myself at the next convenient time.
 As before, this is not an exhaustive list, it merely highlights the most
 pressing issues.
 
-1. MNE-Python has the "reports" feature that can provide html reports for
-   analysis steps that have been run. This feature should be integrated into
-   the mne-study-template, but it's not working so far.
-   (issue [#47](https://github.com/mne-tools/mne-study-template/issues/47))
-1. b
-1. c
+- MNE-Python has the "reports" feature that can provide html reports for
+  analysis steps that have been run. This feature should be integrated into
+  the mne-study-template, but it's not working so far.
+  (issue [#47](https://github.com/mne-tools/mne-study-template/issues/47)
+  in mne-study-template)
+
+
+- MNE-BIDS has a `read_raw_bids` function. Unfortunately, this function does
+  currently not read any digitization files such as the headshape, electrode
+  positions, or head position coils. (issue
+  [#203](https://github.com/mne-tools/mne-bids/issues/203) in mne-bids)
+
+
+- MNE-BIDS has the function to write anatomical data with its `write_anat`
+  function. This function depends on reading fiducial points from an MNE
+  `raw` object. In the future, it should be possible for the function to get
+  fiducial information from a BIDS `coordsystem.json` file (issue
+  [#214](https://github.com/mne-tools/mne-bids/issues/214) in mne-bids)
 
 # Complete documentation
 

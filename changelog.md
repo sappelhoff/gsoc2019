@@ -20,6 +20,9 @@ Wednesday, 2019-08-31
 
 Tuesday, 2019-08-20
 -------------------
+- did some pybv user support:
+  - https://github.com/bids-standard/pybv/issues/31
+  - https://github.com/bids-standard/pybv/issues/30
 - implemented a test script for mne-study-template: https://github.com/mne-tools/mne-study-template/pull/53
 - did some publicity work for mne-bids (mailling list, gitter, twitter, ...): https://twitter.com/stefanappelhoff/status/1163770076501348353
 - started final GSoC report: https://github.com/sappelhoff/gsoc2019/blob/master/FINAL_REPORT.md
