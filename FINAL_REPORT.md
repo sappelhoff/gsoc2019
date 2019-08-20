@@ -75,31 +75,39 @@ Here I list the highlights of my contributions in several projects that are
 interrelated. Somewhat ordered by importance (but feel free to disagree!)
 
 - **[mne-study-template](https://github.com/mne-tools/mne-study-template)**
-    - datasets (datalad + git-annex)
-    - CI with circleci
+    - make the template BIDS compatible: https://github.com/mne-tools/mne-study-template/pull/35
+    - document how to turn any dataset into a git-annex dataset fetchable with datalad: https://blogs.python-gsoc.org/en/sappelhoffs-blog/eleventh-week-of-gsoc-some-more-datalad-complete-and-automatic-flow-now/
+    - CI with circleci: https://github.com/mne-tools/mne-study-template/pull/53
 
 
 - **[mne-bids](https://github.com/mne-tools/mne-bids)**
-  - release
+  - `0.3` release: https://github.com/mne-tools/mne-bids/releases/tag/v0.3
+  - `write_anat` to write T1w MRIs to BIDS for coregistration: https://github.com/mne-tools/mne-bids/pull/211
+  - `get_head_mri_trans` function to estimate a `trans` matrix from an MRI and a `raw` object: https://mne.tools/mne-bids/auto_examples/convert_mri_and_trans.html#sphx-glr-auto-examples-convert-mri-and-trans-py
+
 
 
 - **[mne-python](https://github.com/mne-tools/mne-python)**
-  - BrainVision CapTrack
-  - somato data now in BIDS
+  - add a new digitization format: BrainVision CapTrack: https://github.com/mne-tools/mne-python/pull/6663
+  - somato data now in BIDS: https://github.com/mne-tools/mne-python/pull/6414
+  - refactor BrainVision test suite: https://github.com/mne-tools/mne-python/pull/6623
 
 
 - **[pybv](https://github.com/bids-standard/pybv)**
-  - release
-  - bug fixes for indexing
+  - `0.1` release: https://github.com/bids-standard/pybv/releases/tag/v0.1.0
+  - writing of measurement date: https://github.com/bids-standard/pybv/pull/29
+  - bring up to date to work with MNE > 0.17: https://github.com/bids-standard/pybv/pull/26
 
 
 - **[autoreject](https://github.com/autoreject/autoreject)**
-  - overhaul CI
-  - improve docs
+  - extend docs on how the algorithm works: https://github.com/autoreject/autoreject/pull/147
+  - overhaul CIs (speed up and fixing): https://github.com/autoreject/autoreject/pull/145
+
 
 
 - **[bids-validator](https://github.com/bids-validator/bids-validator)**
-  - x
+  - add guide for BIDS extension development: https://github.com/bids-standard/bids-validator/pull/806
+  - update regular expressions for MEG data: https://github.com/bids-standard/bids-validator/pull/789
 
 # Unfinished business
 
