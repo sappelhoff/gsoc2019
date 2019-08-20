@@ -20,9 +20,15 @@ Wednesday, 2019-08-31
 
 Tuesday, 2019-08-20
 -------------------
+- implemented a test script for mne-study-template: https://github.com/mne-tools/mne-study-template/pull/53
+- did some publicity work for mne-bids (mailling list, gitter, twitter, ...): https://twitter.com/stefanappelhoff/status/1163770076501348353
+- started final GSoC report: https://github.com/sappelhoff/gsoc2019/blob/master/FINAL_REPORT.md
 
 Monday, 2019-08-19
 ------------------
+- maintenance work mne-study-template: https://github.com/mne-tools/mne-study-template/pull/52
+- released MNE-BIDS 0.3: https://github.com/mne-tools/mne-bids/pull/261
+- fixed the fetch_faces_data function in MNE-BIDS: https://github.com/mne-tools/mne-bids/pull/262
 - prepared a PR for MNE-BIDS to change the naming of a function: https://github.com/mne-tools/mne-bids/pull/260
 - wrote a blog post: https://blogs.python-gsoc.org/en/sappelhoffs-blog/twelveth-week-of-gsoc-getting-ready-for-the-final-week-of-gsoc
 
