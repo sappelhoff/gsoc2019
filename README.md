@@ -17,5 +17,8 @@ The [issues page](https://github.com/sappelhoff/gsoc2019/issues) can be used
 for getting in touch and/or discussing plans on what to implement within the
 context of GSoC.
 
+The `/misc_code` directory contains some scripts that are being referred to in
+the changelog.
+
 Lastly, feel free to check out my
 [Final Report](https://github.com/sappelhoff/gsoc2019/blob/master/FINAL_REPORT.md).
