@@ -14,9 +14,15 @@ Friday, 2019-08-23
 
 Thursday, 2019-08-22
 --------------------
+- worked on PR for merging or dropping event duplicates: https://github.com/mne-tools/mne-python/pull/6688
+- inquired about how digitization data is saved in EEG data formats: https://github.com/bids-standard/pyedf/issues/7
+- fixed a documentation on the CapTrak system for digitization: https://github.com/fieldtrip/website/pull/169
 
 Wednesday, 2019-08-31
 ---------------------
+- prepared PR in MNE-BIDS to write electrodes.tsv files: https://github.com/mne-tools/mne-bids/pull/263
+- prepared a PR to MNE-Python to handle events better: https://github.com/mne-tools/mne-python/pull/6688
+- prepare an issue to track progress with the openneuro fetcher: https://github.com/mne-tools/mne-python/issues/6687
 
 Tuesday, 2019-08-20
 -------------------
