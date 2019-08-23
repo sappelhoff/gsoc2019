@@ -11,6 +11,11 @@ Saturday, 2019-08-24
 
 Friday, 2019-08-23
 ------------------
+- had a call with Alex, Juan, Mainak to discuss digitization in MNE-Python
+- worked on improving testing in mne-study-template: https://github.com/mne-tools/mne-study-template/pull/53
+- worked on events merging in MNE-Python: https://github.com/mne-tools/mne-python/pull/6688
+- lots of housekeeping, preparing to finish up my GSoC
+
 
 Thursday, 2019-08-22
 --------------------
