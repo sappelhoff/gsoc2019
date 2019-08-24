@@ -3,11 +3,12 @@ Week 13
 
 Sunday, 2019-08-25
 ------------------
-wrote the final check-in for GSoC: https://blogs.python-gsoc.org/en/sappelhoffs-blog/thirteenth-week-of-gsoc-final-checkin
+- enjoyed some free time :-)
 
 Saturday, 2019-08-24
 --------------------
-- enjoyed some free time :-)
+- worked on making new mne-study-template tests pass: https://github.com/mne-tools/mne-study-template/pull/53
+- wrote the final check-in for GSoC: https://blogs.python-gsoc.org/en/sappelhoffs-blog/thirteenth-week-of-gsoc-final-checkin
 
 Friday, 2019-08-23
 ------------------
