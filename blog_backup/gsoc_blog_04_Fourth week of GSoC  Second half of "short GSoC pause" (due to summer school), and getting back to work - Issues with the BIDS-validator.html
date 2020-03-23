@@ -1,0 +1,657 @@
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Python GSoC - Fourth week of GSoC: Second half of &quot;short GSoC pause&quot; (due to summer school), and getting back to work - Issues with the BIDS-validator - sappelhoff&#39;s Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fourth week of GSoC: Second half of &quot;short GSoC pause&quot; (due to summer school), and getting back to work - Issues with the BIDS-validator - 77cac5a5-1782-4292-b314-611adf450553 - Python's Google Summer of Code Blogs Page">
+        <meta name="google-site-verification" content="EVShtJLdVKN58OupOAYPkH6QRA3i-J8q4ZEklgFiZhE" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous" >
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css" >
+        <!--<![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous" >
+        <link rel="stylesheet" href="/static/css/python-gsoc.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous" async></script>
+        
+        <link rel="shortcut icon" href="/static/favicon.ico"/>
+        
+
+<link rel="stylesheet" type="text/css" href="/static/django_simple_cookie_consent/css/cookieconsent.min.css" />
+<script src="/static/django_simple_cookie_consent/js/cookieconsent.js"></script>
+<script>
+window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#006f65",
+                "text": "#ffffff"
+            },
+            "button": {
+                "background": "#135da8",
+                "text": "#ffffff"
+            }
+        },
+        "content": {
+            "link": "PSF Privacy Policy",
+            "href": "https://www.python.org/privacy/",
+            "dismiss": "Got it!",
+            "message": "This website uses cookies to ensure you get the best experience on our website."
+        },
+        dismissOnScroll: true,
+    })
+});
+</script>
+
+        
+<script src='https://www.google.com/recaptcha/api.js' async></script>
+<link rel="stylesheet" href="/static/css/article.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/cms/css/3.7.0/cms.base.css" />
+
+    </head>
+    <body>
+        
+            
+
+
+
+<div id="cms-top"
+     class="cms cms-reset
+     
+     "
+     dir="ltr" data-touch-action="none">
+
+    
+    <div class="cms-tooltip">Double-click to edit<span></span></div>
+    <div class="cms-tooltip-touch">Tap to edit<span></span></div>
+
+
+    
+    <div class="cms-toolbar">
+        <div class="cms-debug-bar"></div>
+        <div class="cms-toolbar-left">
+            
+<div class="cms-toolbar-item cms-toolbar-item-logo"><a href="/" title="3.7.0"><span>django CMS</span></a></div>
+
+            
+                <ul class="cms-toolbar-item cms-toolbar-item-navigation">
+                    
+                        <li class="">
+    <a href="">
+        <span>python-gsoc.org<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class=" ">
+    <a href="/en/admin/" data-rel="sideframe">
+        <span>Administration...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" ">
+    <a href="/en/suborg/application/new/"><span>New Suborg Application<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class=" ">
+    <a href="/en/suborg/application/"><span>Manage Suborg Application<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" ">
+    <a href="/en/admin/cms/usersettings/" data-rel="sideframe">
+        <span>User settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" ">
+    <a href="?toolbar_off"><span>Disable toolbar<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-show-shortcuts">
+    <a href="#"><span>Shortcuts...<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class="cms-toolbar-item-navigation-active ">
+    <a href="/en/admin/logout/" data-rel="ajax" data-method="GET" data-post="{}" data-on-success="REFRESH_PAGE">
+        <span>Logout sappelhoff<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                        <li class="cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="">
+        <span>Page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class="cms-toolbar-item-navigation-children cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="">
+        <span>Create Page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/add/?edit=1&amp;parent_node=12&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>New Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/add/?edit=1&amp;parent_node=30&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>New Sub Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/duplicate/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Duplicate this Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="?edit"><span>Edit this Page<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/change/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Page settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/advanced-settings/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Advanced settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/pagetype/add/?source=59&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Save as Page Type...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/permission-settings/" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Permissions...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/dates/" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Publishing dates...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/change-navigation/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;yefTBdu54B3vuj0VZ5iT0MmDO3qYqSHfmQiaNXqGr1XblquWZaTMODqFCU6kRofv&quot;}" data-on-success="REFRESH_PAGE">
+        <span>Display in navigation<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/en/unpublish/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;yefTBdu54B3vuj0VZ5iT0MmDO3qYqSHfmQiaNXqGr1XblquWZaTMODqFCU6kRofv&quot;}" data-on-success="REFRESH_PAGE">
+        <span>Unpublish page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled cms-toolbar-revert">
+    <a tabindex="-1" href="/en/admin/cms/page/59/en/revert-to-live/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;yefTBdu54B3vuj0VZ5iT0MmDO3qYqSHfmQiaNXqGr1XblquWZaTMODqFCU6kRofv&quot;}" data-text="Are you sure you want to revert to live?" data-on-success="REFRESH_PAGE">
+        <span>Revert to live<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/delete/" data-rel="modal" data-on-close="/en/">
+        <span>Delete page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                        <li class="">
+    <a href="">
+        <span>sappelhoff&#39;s Blog<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+</li>
+
+                    
+                        <li class="">
+    <a href="">
+        <span>Language<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class="cms-toolbar-item-navigation-active ">
+    <a href="/en/sappelhoffs-blog/fourth-week-of-gsoc-second-half-of-short-gsoc-pause-due-to-summer-school-and-getting-back-to-work-issues-with-the-bids-validator/"><span>en<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                    <li class="cms-toolbar-more">
+                        <a href="#">
+                            <span>More...<span class="cms-icon cms-icon-arrow"></span></span>
+                        </a>
+                        <ul data-touch-action="pan-y"></ul>
+                    </li>
+                </ul>
+            
+        </div>
+
+        <div class="cms-toolbar-right">
+            
+                
+
+    <div class="cms-toolbar-item cms-toolbar-item-buttons ">
+        
+            <a href="/en/cms_wizard/create/?page=59&amp;language=en&amp;edit" class="cms-btn cms-btn-disabled " data-rel="modal" data-on-close="REFRESH_PAGE">Create</a>
+
+        
+    </div>
+
+
+            
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="cms-messages">
+        <div class="cms-messages-close" title="Close"><span class="cms-icon cms-icon-close"></span></div>
+        <div class="cms-messages-inner"></div>
+    </div>
+    
+
+    <div class="cms-sideframe">
+        <div class="cms-sideframe-frame"></div>
+        <div class="cms-sideframe-shim"></div>
+        <div class="cms-sideframe-dimmer"></div>
+        <div class="cms-sideframe-copy"></div>
+        <div class="cms-sideframe-controls"><div class="cms-sideframe-history"><span class="cms-icon cms-icon-arrow cms-icon-arrow-back cms-icon-disabled" title="Click to go back"></span><span class="cms-icon cms-icon-arrow cms-icon-arrow-forward cms-icon-disabled" title="Click to go forward"></span></div><div class="cms-sideframe-close"><span class="cms-icon cms-icon-close"></span></div></div>
+    </div>
+
+    
+
+    <div class="cms-modal" tabindex="-1" data-touch-action="none">
+        <div class="cms-modal-head" data-touch-action="none">
+            <span class="cms-modal-title" data-touch-action="none">
+                <span class="cms-modal-title-prefix"></span>
+                <span class="cms-modal-title-suffix"></span>
+            </span>
+            <span tabindex="0" class="cms-modal-minimize cms-icon cms-icon-minus" title="Minimize"></span>
+            <span tabindex="0" class="cms-modal-maximize cms-icon cms-icon-window" title="Maximize"></span>
+            <span tabindex="0" class="cms-modal-close cms-icon cms-icon-close" title="Close"></span>
+        </div>
+        <div class="cms-modal-breadcrumb" data-touch-action="pan-x"></div>
+        <div class="cms-modal-body">
+            <div class="cms-modal-shim"></div>
+            <div class="cms-modal-frame"></div>
+        </div>
+        <div class="cms-modal-foot">
+            <div class="cms-modal-buttons"></div>
+            <div class="cms-modal-resize"><span class="cms-icon cms-icon-handler"></span></div>
+        </div>
+    </div>
+    
+    <div class="cms-structure">
+        <div class="cms-structure-content" data-touch-action="pan-y">
+        
+            
+        
+        </div>
+    </div>
+    
+
+    
+    <script type="text/javascript" data-cms>
+        var CMS = CMS || {};
+        CMS._plugins = CMS._plugins || [];
+    </script>
+
+</div>
+
+
+        
+
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="layout">
+            <!-- menu -->
+            <div id="menu">
+                <div class="pure-menu">
+                    <ul class="pure-menu-list">
+                        
+
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#gettingstarted" class="pure-menu-link">Getting Started</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/students.html" class="pure-menu-link">Students</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/deadlines.html" class="pure-menu-link">Deadlines</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/mentors.html" class="pure-menu-link">Mentors</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#ideas" class="pure-menu-link">Project Ideas</a></li>
+    
+
+<li class="pure-menu-item"><a href="https://python-gsoc.org/students.html#faq" class="pure-menu-link">FAQ</a></li>
+    
+
+<li class="pure-menu-item"><a href="/en/" class="pure-menu-link">Blogs</a></li>
+    
+
+<li class="pure-menu-item"><a href="https://python-gsoc.org/mentors.html#sub-orgs" class="pure-menu-link">Sub-orgs</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#contact" class="pure-menu-link">Contact</a></li>
+    
+
+<li class="pure-menu-item"><a href="/en/myprofile/" class="pure-menu-link">My Profile</a></li>
+    
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- menu -->
+
+            <div id="main">
+                
+                
+                <div class="notification content">
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                    
+                    
+                        
+                    
+                </div>
+                
+    <div class="content">
+        
+    <div class="aldryn-newsblog-detail">
+        
+
+<article class="aldryn-newsblog-article">
+    
+
+    
+    <div class="text-center">
+    
+        <div class="categories">
+            
+        </div>
+
+        <h1 class="heading">
+            Fourth week of GSoC: Second half of &quot;short GSoC pause&quot; (due to summer school), and getting back to work - Issues with the BIDS-validator
+        </h1>
+        
+
+
+    <p>
+        <a href="">
+            
+        </a>
+        sappelhoff<br />
+        Published: 06/24/2019
+    </p>
+    
+    
+
+
+
+    </div>
+
+    
+        <p class="tags">
+            
+            
+        </p>
+    
+
+    
+
+    
+        <div class="lead">
+            <p>The past week I finished the summer school that I was running from the 11th of June until the 19th of June. It was a success given the reactions from all participants<sup>1</sup>. However I was very happy when I could return to my GSoC project and coding starting last Thursday.</p>
+
+<p>I started by adding a <a href="https://github.com/mne-tools/mne-bids/pull/209">feature to MNE-BIDS</a>: When reading a raw file into a python object, we want to automatically scan an accompanying meta data file (channels.tsv) to populate the python object with information about bad channels in the data. When implementing the feature, most of the problems I encountered were due to an interaction with the <a href="https://github.com/bids-standard/bids-validator">BIDS-validator</a>, which I want to dedicate today's blog post to.</p>
+
+<p><strong>The BIDS-validator</strong></p>
+
+<p>I have written about BIDS before: It's a standard for organizing neuroimaging data. A standard can only be a standard when there is a set of <em>testable</em> rules to follow. The BIDS-validator is a software that automatically checks a dataset for its compliance with the BIDS set of testable rules. The current BIDS-validator is written in JavaScript, which offers a unique advantage: It can be run <em>locally</em> inside a browser (see <a href="https://bids-standard.github.io/bids-validator/">here</a>), that is: No files are uploaded. This way, users of BIDS can employ the BIDS-validator without having to download software. Yet, for users with some programming experience, the BIDS-validator can also be downloaded as a command line tool to run on nodejs.</p>
+
+<p>Alas, the big advantage of having the BIDS-validator instantiated in Javascript also comes at a cost: The programming language itself. With BIDS being a standard for scientific data, most of the user base consists of researchers. Only a fraction of researchers in the field of neuroscience is well versed in Javascript, with the lingua francas of the field being Matlab and Python (and according to my experiences increasingly Python and less and less Matlab). This means, that open source contributions from the researchers to the BIDS-validator are limited and the BIDS-validator development relies on a small core of contributors and to some extend on contributions from a commercial company, funded through grants given to BIDS. The resulting problem is that the BIDS-validator often lags behind the development of the standard ... or that not all rules are tested to an appropriate extend.</p>
+
+<p>Some rules of BIDS are implemented in the form of regular expressions (see <a href="https://github.com/bids-standard/bids-validator/tree/master/bids-validator/bids_validator/rules">here</a>), and are thus"programming language agnostic". This is a great starting point for BIDS-validators implemented in other languages, and there is some <a href="https://pypi.org/project/bids-validator/">limited Python support</a>.</p>
+
+<p>Thinking about this, I often find myself going down the road of writing a complete BIDS-validator in Python. The advantage would be obvious: Much easier development! And the expense that it wouldn't be as easily available from the Browser as the current Javascript implementation would be negligible for anyone who can install a python package. Yet, as soon as we have more than one validator, we need to ensure that they produce exactly the same results ... and that could lead to another set of problems very soon.</p>
+
+<p>It seems there is no easy way out of this situation. For me, that means that while I develop features with Python during my GSoC, I will have to occasionally spend disproportionate amounts of time debugging and enhacing the BIDS-validator with its codebase in Javascript.</p>
+
+<p> </p>
+
+<hr>
+<p><sup>1</sup>Although Eric from MNE-Python told me that <a href="https://gitter.im/mne-tools/mne-gsoc-2019-BIDS?at=5d0bc58a1e35ef14b686bba6">"Success is measured by how many people you convinced to use and contribute to MNE-Python :)"</a></p>
+        </div>
+    
+</article>
+
+    </div>
+    
+
+    <div class="aldryn-newsblog-pager">
+        <ul class="pager">
+            
+                <li class="previous"><a href="/en/sappelhoffs-blog/third-week-of-gsoc-conference-discussions-and-short-gsoc-pause-due-to-summer-school/"><span aria-hidden="true">&larr;</span> Previous</a></li>
+            
+            <li><span class="pager-back"><a href="/en/sappelhoffs-blog/">Overview</a></span></li>
+            
+                <li class="next"><a href="/en/sappelhoffs-blog/fifth-week-of-gsoc-coordinate-systems-and-transformations/">Next <span aria-hidden="true">&rarr;</span></a></li>
+            
+        </ul>
+    </div>
+
+    <div class="aldryn-newsblog-comments">
+        
+
+<form id="form-root" class="pure-form comment-form" action="/comment/new/" method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="7k6lu2mKANkkHQuQC9k9EWuKuoyLKbJPVW9CGMilXde0yXYRCeV2sNyMife7bHh5">
+    <input type="hidden" name="redirect" id="redirect-root" value="" />
+    
+    <script>
+        document.getElementById('redirect-root').value = window.location.pathname;
+    </script>
+    
+    <input type="hidden" name="article" value="191" />
+    
+    
+    
+    
+        <input type="hidden" name="user" value="22" />
+    
+
+    <fieldset class="pure-group">
+        
+            <input type="text" name="username" value="sappelhoff" class="pure-input-1" maxlength="50" disabled />
+        
+        <textarea name="comment" placeholder="Comment" class="pure-input-1" id="comment-textarea-root"
+         maxlength="1000" onkeyup="updateCharCount('root');" required></textarea>
+        <span class="pure-form-message" id="remaining-chars-root">1000 characters left</span>
+    </fieldset>
+
+    <div class="g-recaptcha" data-sitekey="6Le657AUAAAAAKv15TaP3uJwII0ebouY3-iuFY7o" data-callback="enableSubmit_root" style="margin-bottom: 0.75em;"></div>
+
+    <input class="pure-button pure-button-primary pure-input-1" type="submit" value="Submit" id="submit-root" disabled/>
+</form>
+
+<script>
+    function enableSubmit_root() {
+        var submit = document.getElementById("submit-root");
+        submit.disabled = false;
+    }
+</script>
+    </div>
+
+    </div>
+
+            </div>
+        </div>
+
+        
+<script data-cms src="/static/cms/js/dist/3.7.0/bundle.toolbar.min.js" type="text/javascript"></script>
+<script data-cms>
+CMS._plugins = CMS._plugins || [];
+// this is a global shared configuration
+CMS.config = {
+    'mode': 'live',
+    'auth': true,
+    'debug': false,
+    'csrf': '7k6lu2mKANkkHQuQC9k9EWuKuoyLKbJPVW9CGMilXde0yXYRCeV2sNyMife7bHh5',
+    'request': {
+        'language': 'en',
+        'model': '',
+        'page_id': '59',
+        'pk': '',
+        'url': '/en/admin/cms/page/resolve/',
+        'toolbar': '/en/admin/cms/usersettings/cms-toolbar/'
+    },
+    'lang': {
+        
+        'debug': 'Development version using django CMS 3.7.0, Django 2.2.7, Python 3.7.6',
+        
+        'cancel': 'Cancel',
+        'error': '<strong>The following error occured:</strong> ',
+        'success': 'Action successful.',
+        'confirm': 'Are you sure you want to delete this plugin?',
+        'publish': 'Are you sure you want to publish this page?',
+        'addPluginPlaceholder': 'Plugin will be added here',
+        'confirmDirty': 'You have unsaved changes.',
+        'loading': 'Loading',
+        'confirmDirtyESC': 'Are you sure you want to abandon these changes?',
+        'errorLoadingEditForm': 'The form could not be loaded. Please check that the server is running correctly.',
+        'mostUsed': 'Most used',
+        'shortcuts': 'Shortcuts',
+        'unhandledPageChange': 'The page was changed in the meantime, reloading...',
+        'shortcutAreas': [
+            {
+                'title': 'CMS-wide Shortcuts',
+                'shortcuts': {
+                    'help': {
+                        'shortcut': '?',
+                        'desc': 'Bring up this help dialog'
+                    },
+                    'esc': {
+                        'shortcut': 'ESC',
+                        'desc': 'Close/cancel'
+                    },
+                    'toggle-structure-board': {
+                        'shortcut': 'space',
+                        'desc': 'Toggle structure mode'
+                    },
+                    'toggle-structure-board-using-hovered-plugin': {
+                        'shortcut': 'shift+space',
+                        'desc': 'Toggle structure mode and highlight hovered\u002Dover plugin'
+                    },
+                    'create-dialog': {
+                        'shortcut': 'alt+c',
+                        'desc': 'Open \u0022Create\u0022 dialog'
+                    },
+                    'toolbar': {
+                        'shortcut': 'f > t / alt+t',
+                        'desc': 'Focus on Toolbar'
+                    },
+                }
+            },
+            {
+                'title': 'Structureboard',
+                'shortcuts': {
+                    'placeholders': {
+                        'shortcut': 'f > p / alt+p',
+                        'desc': 'Focus on placeholders'
+                    },
+                    'traversing': {
+                        'shortcut': 'tab / shift+tab',
+                        'desc': 'Move to next/previous element'
+                    },
+                    'enter': {
+                        'shortcut': 'enter',
+                        'desc': 'Focus on plugins of placeholder'
+                    },
+                    'edit': {
+                        'shortcut': 'e',
+                        'desc': 'Edit plugin'
+                    },
+                    'add': {
+                        'shortcut': '+ / a',
+                        'desc': 'Add plugin'
+                    },
+                    'settings': {
+                        'shortcut': '! / s',
+                        'desc': 'Open actions menu'
+                    },
+                    'collapse': {
+                        'shortcut': 'x',
+                        'desc': 'Expand/collapse'
+                    }
+                }
+            }
+        ]
+    },
+    'urls': {
+        'settings': '/en/admin/cms/usersettings/session_store/', // url to save settings
+        'static': '/static/'
+    },
+    'settings': {
+        'version': '3.7.0',
+        'toolbar': 'expanded',
+        'mode': 'edit',
+        'sideframe': { 'url': '' },
+        'states': [],
+        'edit': 'edit',
+        'edit_off': 'edit_off',
+        'structure': 'structure',
+        'legacy_mode': true
+    },
+    'clipboard': {
+        'id': '237',
+        'url': '/en/admin/cms/page/clear-placeholder/237/'
+    },
+    'messages': '',
+    'error': '',
+    'publisher': ''
+};
+CMS.$(function () {
+    CMS.settings = CMS.API.Helpers.getSettings();
+
+    // extends API
+    CMS.API.Clipboard = new CMS.Clipboard();
+    CMS.API.StructureBoard = new CMS.StructureBoard();
+    CMS.API.Messages = new CMS.Messages();
+    CMS.API.Tooltip = new CMS.Tooltip();
+    CMS.API.Toolbar = new CMS.Toolbar();
+
+    CMS.Plugin._initializeTree();
+});
+</script>
+
+
+        <script src="/static/js/python-gsoc.js" async></script>
+        
+    <script src="/static/js/comments.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,664 @@
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Python GSoC - Twelveth week of GSoC: Getting ready for the final week of GSoC - sappelhoff&#39;s Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Twelveth week of GSoC: Getting ready for the final week of GSoC - 77cac5a5-1782-4292-b314-611adf450553 - Python's Google Summer of Code Blogs Page">
+        <meta name="google-site-verification" content="EVShtJLdVKN58OupOAYPkH6QRA3i-J8q4ZEklgFiZhE" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous" >
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css" >
+        <!--<![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous" >
+        <link rel="stylesheet" href="/static/css/python-gsoc.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous" async></script>
+        
+        <link rel="shortcut icon" href="/static/favicon.ico"/>
+        
+
+<link rel="stylesheet" type="text/css" href="/static/django_simple_cookie_consent/css/cookieconsent.min.css" />
+<script src="/static/django_simple_cookie_consent/js/cookieconsent.js"></script>
+<script>
+window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#006f65",
+                "text": "#ffffff"
+            },
+            "button": {
+                "background": "#135da8",
+                "text": "#ffffff"
+            }
+        },
+        "content": {
+            "link": "PSF Privacy Policy",
+            "href": "https://www.python.org/privacy/",
+            "dismiss": "Got it!",
+            "message": "This website uses cookies to ensure you get the best experience on our website."
+        },
+        dismissOnScroll: true,
+    })
+});
+</script>
+
+        
+<script src='https://www.google.com/recaptcha/api.js' async></script>
+<link rel="stylesheet" href="/static/css/article.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/cms/css/3.7.0/cms.base.css" />
+
+    </head>
+    <body>
+        
+            
+
+
+
+<div id="cms-top"
+     class="cms cms-reset
+     
+     "
+     dir="ltr" data-touch-action="none">
+
+    
+    <div class="cms-tooltip">Double-click to edit<span></span></div>
+    <div class="cms-tooltip-touch">Tap to edit<span></span></div>
+
+
+    
+    <div class="cms-toolbar">
+        <div class="cms-debug-bar"></div>
+        <div class="cms-toolbar-left">
+            
+<div class="cms-toolbar-item cms-toolbar-item-logo"><a href="/" title="3.7.0"><span>django CMS</span></a></div>
+
+            
+                <ul class="cms-toolbar-item cms-toolbar-item-navigation">
+                    
+                        <li class="">
+    <a href="">
+        <span>python-gsoc.org<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class=" ">
+    <a href="/en/admin/" data-rel="sideframe">
+        <span>Administration...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" ">
+    <a href="/en/suborg/application/new/"><span>New Suborg Application<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class=" ">
+    <a href="/en/suborg/application/"><span>Manage Suborg Application<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" ">
+    <a href="/en/admin/cms/usersettings/" data-rel="sideframe">
+        <span>User settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" ">
+    <a href="?toolbar_off"><span>Disable toolbar<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-show-shortcuts">
+    <a href="#"><span>Shortcuts...<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class="cms-toolbar-item-navigation-active ">
+    <a href="/en/admin/logout/" data-rel="ajax" data-method="GET" data-post="{}" data-on-success="REFRESH_PAGE">
+        <span>Logout sappelhoff<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                        <li class="cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="">
+        <span>Page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class="cms-toolbar-item-navigation-children cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="">
+        <span>Create Page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/add/?edit=1&amp;parent_node=12&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>New Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/add/?edit=1&amp;parent_node=30&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>New Sub Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/duplicate/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Duplicate this Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="?edit"><span>Edit this Page<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/change/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Page settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/advanced-settings/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Advanced settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/pagetype/add/?source=59&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Save as Page Type...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/permission-settings/" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Permissions...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/dates/" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Publishing dates...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/change-navigation/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;GyiNSwRFF1pZTZeTfaMvRbyVV94PEcEQual44gNg2rjFK6IUffnoF2CXJ0Kb5Ic6&quot;}" data-on-success="REFRESH_PAGE">
+        <span>Display in navigation<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/en/unpublish/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;GyiNSwRFF1pZTZeTfaMvRbyVV94PEcEQual44gNg2rjFK6IUffnoF2CXJ0Kb5Ic6&quot;}" data-on-success="REFRESH_PAGE">
+        <span>Unpublish page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled cms-toolbar-revert">
+    <a tabindex="-1" href="/en/admin/cms/page/59/en/revert-to-live/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;GyiNSwRFF1pZTZeTfaMvRbyVV94PEcEQual44gNg2rjFK6IUffnoF2CXJ0Kb5Ic6&quot;}" data-text="Are you sure you want to revert to live?" data-on-success="REFRESH_PAGE">
+        <span>Revert to live<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/delete/" data-rel="modal" data-on-close="/en/">
+        <span>Delete page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                        <li class="">
+    <a href="">
+        <span>sappelhoff&#39;s Blog<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+</li>
+
+                    
+                        <li class="">
+    <a href="">
+        <span>Language<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class="cms-toolbar-item-navigation-active ">
+    <a href="/en/sappelhoffs-blog/twelveth-week-of-gsoc-getting-ready-for-the-final-week-of-gsoc/"><span>en<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                    <li class="cms-toolbar-more">
+                        <a href="#">
+                            <span>More...<span class="cms-icon cms-icon-arrow"></span></span>
+                        </a>
+                        <ul data-touch-action="pan-y"></ul>
+                    </li>
+                </ul>
+            
+        </div>
+
+        <div class="cms-toolbar-right">
+            
+                
+
+    <div class="cms-toolbar-item cms-toolbar-item-buttons ">
+        
+            <a href="/en/cms_wizard/create/?page=59&amp;language=en&amp;edit" class="cms-btn cms-btn-disabled " data-rel="modal" data-on-close="REFRESH_PAGE">Create</a>
+
+        
+    </div>
+
+
+            
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="cms-messages">
+        <div class="cms-messages-close" title="Close"><span class="cms-icon cms-icon-close"></span></div>
+        <div class="cms-messages-inner"></div>
+    </div>
+    
+
+    <div class="cms-sideframe">
+        <div class="cms-sideframe-frame"></div>
+        <div class="cms-sideframe-shim"></div>
+        <div class="cms-sideframe-dimmer"></div>
+        <div class="cms-sideframe-copy"></div>
+        <div class="cms-sideframe-controls"><div class="cms-sideframe-history"><span class="cms-icon cms-icon-arrow cms-icon-arrow-back cms-icon-disabled" title="Click to go back"></span><span class="cms-icon cms-icon-arrow cms-icon-arrow-forward cms-icon-disabled" title="Click to go forward"></span></div><div class="cms-sideframe-close"><span class="cms-icon cms-icon-close"></span></div></div>
+    </div>
+
+    
+
+    <div class="cms-modal" tabindex="-1" data-touch-action="none">
+        <div class="cms-modal-head" data-touch-action="none">
+            <span class="cms-modal-title" data-touch-action="none">
+                <span class="cms-modal-title-prefix"></span>
+                <span class="cms-modal-title-suffix"></span>
+            </span>
+            <span tabindex="0" class="cms-modal-minimize cms-icon cms-icon-minus" title="Minimize"></span>
+            <span tabindex="0" class="cms-modal-maximize cms-icon cms-icon-window" title="Maximize"></span>
+            <span tabindex="0" class="cms-modal-close cms-icon cms-icon-close" title="Close"></span>
+        </div>
+        <div class="cms-modal-breadcrumb" data-touch-action="pan-x"></div>
+        <div class="cms-modal-body">
+            <div class="cms-modal-shim"></div>
+            <div class="cms-modal-frame"></div>
+        </div>
+        <div class="cms-modal-foot">
+            <div class="cms-modal-buttons"></div>
+            <div class="cms-modal-resize"><span class="cms-icon cms-icon-handler"></span></div>
+        </div>
+    </div>
+    
+    <div class="cms-structure">
+        <div class="cms-structure-content" data-touch-action="pan-y">
+        
+            
+        
+        </div>
+    </div>
+    
+
+    
+    <script type="text/javascript" data-cms>
+        var CMS = CMS || {};
+        CMS._plugins = CMS._plugins || [];
+    </script>
+
+</div>
+
+
+        
+
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="layout">
+            <!-- menu -->
+            <div id="menu">
+                <div class="pure-menu">
+                    <ul class="pure-menu-list">
+                        
+
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#gettingstarted" class="pure-menu-link">Getting Started</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/students.html" class="pure-menu-link">Students</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/deadlines.html" class="pure-menu-link">Deadlines</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/mentors.html" class="pure-menu-link">Mentors</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#ideas" class="pure-menu-link">Project Ideas</a></li>
+    
+
+<li class="pure-menu-item"><a href="https://python-gsoc.org/students.html#faq" class="pure-menu-link">FAQ</a></li>
+    
+
+<li class="pure-menu-item"><a href="/en/" class="pure-menu-link">Blogs</a></li>
+    
+
+<li class="pure-menu-item"><a href="https://python-gsoc.org/mentors.html#sub-orgs" class="pure-menu-link">Sub-orgs</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#contact" class="pure-menu-link">Contact</a></li>
+    
+
+<li class="pure-menu-item"><a href="/en/myprofile/" class="pure-menu-link">My Profile</a></li>
+    
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- menu -->
+
+            <div id="main">
+                
+                
+                <div class="notification content">
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                    
+                    
+                        
+                    
+                </div>
+                
+    <div class="content">
+        
+    <div class="aldryn-newsblog-detail">
+        
+
+<article class="aldryn-newsblog-article">
+    
+
+    
+    <div class="text-center">
+    
+        <div class="categories">
+            
+        </div>
+
+        <h1 class="heading">
+            Twelveth week of GSoC: Getting ready for the final week of GSoC
+        </h1>
+        
+
+
+    <p>
+        <a href="">
+            
+        </a>
+        sappelhoff<br />
+        Published: 08/19/2019
+    </p>
+    
+    
+
+
+
+    </div>
+
+    
+        <p class="tags">
+            
+            
+        </p>
+    
+
+    
+
+    
+        <div class="lead">
+            <p>My GSoC is soon coming to an end so I took some time to write down what still needs to be done:</p>
+
+<p><strong>Making a release of MNE-BIDS</strong></p>
+
+<p>In the past months, there were substantial additions, fixes, and cosmetic changes made to the codebase and documentation of MNE-BIDS. The last release has happened in April (about 4 months ago) and we were quite happy to observe some issues and pull requests raised and submitted by new users. With the next release we can provide some new functionality for this growing user base.</p>
+
+<p><strong>Handling coordinates for EEG and iEEG in MNE-BIDS</strong></p>
+
+<p>In MNE-BIDS, the part of the code that handles the writing of sensor positions in 3D space (=coordinates) is so far restricted to MEG data. Extending this functionality to EEG and iEEG data has been on the to do list for a long time now. Fortunately, I have been learning a bit more about this topic during my GSoC, and Mainak has provided some starting points in an unrelated PR that I can use to finish this issue. (After the release of MNE-BIDS though, to avoid cramming in too much last-minute content before the release)</p>
+
+<p><strong>Writing a data fetcher for OpenNeuro to be used in MNE-Python</strong></p>
+
+<p>While working with BIDS and M/EEG data, the need for good testing data has come up time and time again. For the mne-study-template we solved this issue with a combination of DataLad and OpenNeuro. Meanwhile, MNE-BIDS has its own dataset.py module ... however, we all feel like this module is duplicating the datasets module of MNE-Python and not advancing MNE-BIDS. Rather, it is confusing the purpose of MNE-BIDS.</p>
+
+<p>As a solution, we want to write a generalized data fetching function for MNE-Python that works with OpenNeuro ... without adding the DataLad (and hence Git-Annex) dependency). Once this fetching function is implemented, we can import it in MNE-BIDS and finally deprecate MNE-BIDS' dataset.py module.</p>
+
+<p><strong>Make a PR in MNE-Python that will support making Epochs for duplicate events (will fix ds001971 PR)</strong></p>
+
+<p>In MNE-Python, making data epochs is not possible, if two events share the same time. This became apparent with the dataset ds001971 that we wanted to add to the mne-study-template pipeline: <a href="https://github.com/mne-tools/mne-study-template/pull/41">https://github.com/mne-tools/mne-study-template/pull/41</a>. There was a suggestion on how to solve this issue by merging the event codes that occurred at the same time. Once this fix is implemented in MNE-Python, we can use this to finish the PR in the mne-study-template.</p>
+
+<p><strong>Salvage / close the PR on more "read_raw_bids" additions</strong></p>
+
+<p>Earlier in this GSoC, I made a PR intended to improve the reading functionality of MNE-BIDS (<a href="https://github.com/mne-tools/mne-bids/pull/244">https://github.com/mne-tools/mne-bids/pull/244</a>). However, the PR was controversially discussed, because it was not leveraging BIDS and instead relying on introducing a dictionary as a container for keyword arguments.</p>
+
+<p>After lots of discussion, we agreed to solve the situation in a different way (by leveraging BIDS) and Mainak made some initial commits into that direction. However in the further progress, the PR was dropped because other issues had higher priority.</p>
+
+<p>Before finishing my GSoC, I want to salvage what's possible from this PR and then close it ... and improving the original issue report so that the next attempt at this PR can rely on a more detailed objective.</p>
+        </div>
+    
+</article>
+
+    </div>
+    
+
+    <div class="aldryn-newsblog-pager">
+        <ul class="pager">
+            
+                <li class="previous"><a href="/en/sappelhoffs-blog/eleventh-week-of-gsoc-some-more-datalad-complete-and-automatic-flow-now/"><span aria-hidden="true">&larr;</span> Previous</a></li>
+            
+            <li><span class="pager-back"><a href="/en/sappelhoffs-blog/">Overview</a></span></li>
+            
+                <li class="next"><a href="/en/sappelhoffs-blog/thirteenth-week-of-gsoc-final-checkin/">Next <span aria-hidden="true">&rarr;</span></a></li>
+            
+        </ul>
+    </div>
+
+    <div class="aldryn-newsblog-comments">
+        
+
+<form id="form-root" class="pure-form comment-form" action="/comment/new/" method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="vCKNmjzl962Gti6Mer8LLTnmJsk2T9JjjeN4y3vWwwWmkpANewJEzKroxj0okFhz">
+    <input type="hidden" name="redirect" id="redirect-root" value="" />
+    
+    <script>
+        document.getElementById('redirect-root').value = window.location.pathname;
+    </script>
+    
+    <input type="hidden" name="article" value="449" />
+    
+    
+    
+    
+        <input type="hidden" name="user" value="22" />
+    
+
+    <fieldset class="pure-group">
+        
+            <input type="text" name="username" value="sappelhoff" class="pure-input-1" maxlength="50" disabled />
+        
+        <textarea name="comment" placeholder="Comment" class="pure-input-1" id="comment-textarea-root"
+         maxlength="1000" onkeyup="updateCharCount('root');" required></textarea>
+        <span class="pure-form-message" id="remaining-chars-root">1000 characters left</span>
+    </fieldset>
+
+    <div class="g-recaptcha" data-sitekey="6Le657AUAAAAAKv15TaP3uJwII0ebouY3-iuFY7o" data-callback="enableSubmit_root" style="margin-bottom: 0.75em;"></div>
+
+    <input class="pure-button pure-button-primary pure-input-1" type="submit" value="Submit" id="submit-root" disabled/>
+</form>
+
+<script>
+    function enableSubmit_root() {
+        var submit = document.getElementById("submit-root");
+        submit.disabled = false;
+    }
+</script>
+    </div>
+
+    </div>
+
+            </div>
+        </div>
+
+        
+<script data-cms src="/static/cms/js/dist/3.7.0/bundle.toolbar.min.js" type="text/javascript"></script>
+<script data-cms>
+CMS._plugins = CMS._plugins || [];
+// this is a global shared configuration
+CMS.config = {
+    'mode': 'live',
+    'auth': true,
+    'debug': false,
+    'csrf': 'vCKNmjzl962Gti6Mer8LLTnmJsk2T9JjjeN4y3vWwwWmkpANewJEzKroxj0okFhz',
+    'request': {
+        'language': 'en',
+        'model': '',
+        'page_id': '59',
+        'pk': '',
+        'url': '/en/admin/cms/page/resolve/',
+        'toolbar': '/en/admin/cms/usersettings/cms-toolbar/'
+    },
+    'lang': {
+        
+        'debug': 'Development version using django CMS 3.7.0, Django 2.2.7, Python 3.7.6',
+        
+        'cancel': 'Cancel',
+        'error': '<strong>The following error occured:</strong> ',
+        'success': 'Action successful.',
+        'confirm': 'Are you sure you want to delete this plugin?',
+        'publish': 'Are you sure you want to publish this page?',
+        'addPluginPlaceholder': 'Plugin will be added here',
+        'confirmDirty': 'You have unsaved changes.',
+        'loading': 'Loading',
+        'confirmDirtyESC': 'Are you sure you want to abandon these changes?',
+        'errorLoadingEditForm': 'The form could not be loaded. Please check that the server is running correctly.',
+        'mostUsed': 'Most used',
+        'shortcuts': 'Shortcuts',
+        'unhandledPageChange': 'The page was changed in the meantime, reloading...',
+        'shortcutAreas': [
+            {
+                'title': 'CMS-wide Shortcuts',
+                'shortcuts': {
+                    'help': {
+                        'shortcut': '?',
+                        'desc': 'Bring up this help dialog'
+                    },
+                    'esc': {
+                        'shortcut': 'ESC',
+                        'desc': 'Close/cancel'
+                    },
+                    'toggle-structure-board': {
+                        'shortcut': 'space',
+                        'desc': 'Toggle structure mode'
+                    },
+                    'toggle-structure-board-using-hovered-plugin': {
+                        'shortcut': 'shift+space',
+                        'desc': 'Toggle structure mode and highlight hovered\u002Dover plugin'
+                    },
+                    'create-dialog': {
+                        'shortcut': 'alt+c',
+                        'desc': 'Open \u0022Create\u0022 dialog'
+                    },
+                    'toolbar': {
+                        'shortcut': 'f > t / alt+t',
+                        'desc': 'Focus on Toolbar'
+                    },
+                }
+            },
+            {
+                'title': 'Structureboard',
+                'shortcuts': {
+                    'placeholders': {
+                        'shortcut': 'f > p / alt+p',
+                        'desc': 'Focus on placeholders'
+                    },
+                    'traversing': {
+                        'shortcut': 'tab / shift+tab',
+                        'desc': 'Move to next/previous element'
+                    },
+                    'enter': {
+                        'shortcut': 'enter',
+                        'desc': 'Focus on plugins of placeholder'
+                    },
+                    'edit': {
+                        'shortcut': 'e',
+                        'desc': 'Edit plugin'
+                    },
+                    'add': {
+                        'shortcut': '+ / a',
+                        'desc': 'Add plugin'
+                    },
+                    'settings': {
+                        'shortcut': '! / s',
+                        'desc': 'Open actions menu'
+                    },
+                    'collapse': {
+                        'shortcut': 'x',
+                        'desc': 'Expand/collapse'
+                    }
+                }
+            }
+        ]
+    },
+    'urls': {
+        'settings': '/en/admin/cms/usersettings/session_store/', // url to save settings
+        'static': '/static/'
+    },
+    'settings': {
+        'version': '3.7.0',
+        'toolbar': 'expanded',
+        'mode': 'edit',
+        'sideframe': { 'url': '' },
+        'states': [],
+        'edit': 'edit',
+        'edit_off': 'edit_off',
+        'structure': 'structure',
+        'legacy_mode': true
+    },
+    'clipboard': {
+        'id': '237',
+        'url': '/en/admin/cms/page/clear-placeholder/237/'
+    },
+    'messages': '',
+    'error': '',
+    'publisher': ''
+};
+CMS.$(function () {
+    CMS.settings = CMS.API.Helpers.getSettings();
+
+    // extends API
+    CMS.API.Clipboard = new CMS.Clipboard();
+    CMS.API.StructureBoard = new CMS.StructureBoard();
+    CMS.API.Messages = new CMS.Messages();
+    CMS.API.Tooltip = new CMS.Tooltip();
+    CMS.API.Toolbar = new CMS.Toolbar();
+
+    CMS.Plugin._initializeTree();
+});
+</script>
+
+
+        <script src="/static/js/python-gsoc.js" async></script>
+        
+    <script src="/static/js/comments.js"></script>
+
+    </body>
+</html>

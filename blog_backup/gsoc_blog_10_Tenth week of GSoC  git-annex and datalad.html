@@ -1,0 +1,803 @@
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Python GSoC - Tenth week of GSoC: git-annex and datalad - sappelhoff&#39;s Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tenth week of GSoC: git-annex and datalad - 77cac5a5-1782-4292-b314-611adf450553 - Python's Google Summer of Code Blogs Page">
+        <meta name="google-site-verification" content="EVShtJLdVKN58OupOAYPkH6QRA3i-J8q4ZEklgFiZhE" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous" >
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css" >
+        <!--<![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous" >
+        <link rel="stylesheet" href="/static/css/python-gsoc.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous" async></script>
+        
+        <link rel="shortcut icon" href="/static/favicon.ico"/>
+        
+
+<link rel="stylesheet" type="text/css" href="/static/django_simple_cookie_consent/css/cookieconsent.min.css" />
+<script src="/static/django_simple_cookie_consent/js/cookieconsent.js"></script>
+<script>
+window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#006f65",
+                "text": "#ffffff"
+            },
+            "button": {
+                "background": "#135da8",
+                "text": "#ffffff"
+            }
+        },
+        "content": {
+            "link": "PSF Privacy Policy",
+            "href": "https://www.python.org/privacy/",
+            "dismiss": "Got it!",
+            "message": "This website uses cookies to ensure you get the best experience on our website."
+        },
+        dismissOnScroll: true,
+    })
+});
+</script>
+
+        
+<script src='https://www.google.com/recaptcha/api.js' async></script>
+<link rel="stylesheet" href="/static/css/article.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/cms/css/3.7.0/cms.base.css" />
+
+    </head>
+    <body>
+        
+            
+
+
+
+<div id="cms-top"
+     class="cms cms-reset
+     
+     "
+     dir="ltr" data-touch-action="none">
+
+    
+    <div class="cms-tooltip">Double-click to edit<span></span></div>
+    <div class="cms-tooltip-touch">Tap to edit<span></span></div>
+
+
+    
+    <div class="cms-toolbar">
+        <div class="cms-debug-bar"></div>
+        <div class="cms-toolbar-left">
+            
+<div class="cms-toolbar-item cms-toolbar-item-logo"><a href="/" title="3.7.0"><span>django CMS</span></a></div>
+
+            
+                <ul class="cms-toolbar-item cms-toolbar-item-navigation">
+                    
+                        <li class="">
+    <a href="">
+        <span>python-gsoc.org<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class=" ">
+    <a href="/en/admin/" data-rel="sideframe">
+        <span>Administration...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" ">
+    <a href="/en/suborg/application/new/"><span>New Suborg Application<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class=" ">
+    <a href="/en/suborg/application/"><span>Manage Suborg Application<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" ">
+    <a href="/en/admin/cms/usersettings/" data-rel="sideframe">
+        <span>User settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" ">
+    <a href="?toolbar_off"><span>Disable toolbar<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-show-shortcuts">
+    <a href="#"><span>Shortcuts...<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class="cms-toolbar-item-navigation-active ">
+    <a href="/en/admin/logout/" data-rel="ajax" data-method="GET" data-post="{}" data-on-success="REFRESH_PAGE">
+        <span>Logout sappelhoff<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                        <li class="cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="">
+        <span>Page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class="cms-toolbar-item-navigation-children cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="">
+        <span>Create Page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/add/?edit=1&amp;parent_node=12&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>New Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/add/?edit=1&amp;parent_node=30&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>New Sub Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/duplicate/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Duplicate this Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="?edit"><span>Edit this Page<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/change/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Page settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/advanced-settings/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Advanced settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/pagetype/add/?source=59&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Save as Page Type...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/permission-settings/" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Permissions...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/dates/" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Publishing dates...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/change-navigation/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;duQd7DjdqqZ2l7xddLiDHyehWJzQGwQd16TujnfONQTIce1edQTwvpijKAfc72ot&quot;}" data-on-success="REFRESH_PAGE">
+        <span>Display in navigation<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/en/unpublish/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;duQd7DjdqqZ2l7xddLiDHyehWJzQGwQd16TujnfONQTIce1edQTwvpijKAfc72ot&quot;}" data-on-success="REFRESH_PAGE">
+        <span>Unpublish page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled cms-toolbar-revert">
+    <a tabindex="-1" href="/en/admin/cms/page/59/en/revert-to-live/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;duQd7DjdqqZ2l7xddLiDHyehWJzQGwQd16TujnfONQTIce1edQTwvpijKAfc72ot&quot;}" data-text="Are you sure you want to revert to live?" data-on-success="REFRESH_PAGE">
+        <span>Revert to live<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/delete/" data-rel="modal" data-on-close="/en/">
+        <span>Delete page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                        <li class="">
+    <a href="">
+        <span>sappelhoff&#39;s Blog<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+</li>
+
+                    
+                        <li class="">
+    <a href="">
+        <span>Language<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class="cms-toolbar-item-navigation-active ">
+    <a href="/en/sappelhoffs-blog/tenth-week-of-gsoc-git-annex-and-datalad/"><span>en<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                    <li class="cms-toolbar-more">
+                        <a href="#">
+                            <span>More...<span class="cms-icon cms-icon-arrow"></span></span>
+                        </a>
+                        <ul data-touch-action="pan-y"></ul>
+                    </li>
+                </ul>
+            
+        </div>
+
+        <div class="cms-toolbar-right">
+            
+                
+
+    <div class="cms-toolbar-item cms-toolbar-item-buttons ">
+        
+            <a href="/en/cms_wizard/create/?page=59&amp;language=en&amp;edit" class="cms-btn cms-btn-disabled " data-rel="modal" data-on-close="REFRESH_PAGE">Create</a>
+
+        
+    </div>
+
+
+            
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="cms-messages">
+        <div class="cms-messages-close" title="Close"><span class="cms-icon cms-icon-close"></span></div>
+        <div class="cms-messages-inner"></div>
+    </div>
+    
+
+    <div class="cms-sideframe">
+        <div class="cms-sideframe-frame"></div>
+        <div class="cms-sideframe-shim"></div>
+        <div class="cms-sideframe-dimmer"></div>
+        <div class="cms-sideframe-copy"></div>
+        <div class="cms-sideframe-controls"><div class="cms-sideframe-history"><span class="cms-icon cms-icon-arrow cms-icon-arrow-back cms-icon-disabled" title="Click to go back"></span><span class="cms-icon cms-icon-arrow cms-icon-arrow-forward cms-icon-disabled" title="Click to go forward"></span></div><div class="cms-sideframe-close"><span class="cms-icon cms-icon-close"></span></div></div>
+    </div>
+
+    
+
+    <div class="cms-modal" tabindex="-1" data-touch-action="none">
+        <div class="cms-modal-head" data-touch-action="none">
+            <span class="cms-modal-title" data-touch-action="none">
+                <span class="cms-modal-title-prefix"></span>
+                <span class="cms-modal-title-suffix"></span>
+            </span>
+            <span tabindex="0" class="cms-modal-minimize cms-icon cms-icon-minus" title="Minimize"></span>
+            <span tabindex="0" class="cms-modal-maximize cms-icon cms-icon-window" title="Maximize"></span>
+            <span tabindex="0" class="cms-modal-close cms-icon cms-icon-close" title="Close"></span>
+        </div>
+        <div class="cms-modal-breadcrumb" data-touch-action="pan-x"></div>
+        <div class="cms-modal-body">
+            <div class="cms-modal-shim"></div>
+            <div class="cms-modal-frame"></div>
+        </div>
+        <div class="cms-modal-foot">
+            <div class="cms-modal-buttons"></div>
+            <div class="cms-modal-resize"><span class="cms-icon cms-icon-handler"></span></div>
+        </div>
+    </div>
+    
+    <div class="cms-structure">
+        <div class="cms-structure-content" data-touch-action="pan-y">
+        
+            
+        
+        </div>
+    </div>
+    
+
+    
+    <script type="text/javascript" data-cms>
+        var CMS = CMS || {};
+        CMS._plugins = CMS._plugins || [];
+    </script>
+
+</div>
+
+
+        
+
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="layout">
+            <!-- menu -->
+            <div id="menu">
+                <div class="pure-menu">
+                    <ul class="pure-menu-list">
+                        
+
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#gettingstarted" class="pure-menu-link">Getting Started</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/students.html" class="pure-menu-link">Students</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/deadlines.html" class="pure-menu-link">Deadlines</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/mentors.html" class="pure-menu-link">Mentors</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#ideas" class="pure-menu-link">Project Ideas</a></li>
+    
+
+<li class="pure-menu-item"><a href="https://python-gsoc.org/students.html#faq" class="pure-menu-link">FAQ</a></li>
+    
+
+<li class="pure-menu-item"><a href="/en/" class="pure-menu-link">Blogs</a></li>
+    
+
+<li class="pure-menu-item"><a href="https://python-gsoc.org/mentors.html#sub-orgs" class="pure-menu-link">Sub-orgs</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#contact" class="pure-menu-link">Contact</a></li>
+    
+
+<li class="pure-menu-item"><a href="/en/myprofile/" class="pure-menu-link">My Profile</a></li>
+    
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- menu -->
+
+            <div id="main">
+                
+                
+                <div class="notification content">
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                    
+                    
+                        
+                    
+                </div>
+                
+    <div class="content">
+        
+    <div class="aldryn-newsblog-detail">
+        
+
+<article class="aldryn-newsblog-article">
+    
+
+    
+    <div class="text-center">
+    
+        <div class="categories">
+            
+        </div>
+
+        <h1 class="heading">
+            Tenth week of GSoC: git-annex and datalad
+        </h1>
+        
+
+
+    <p>
+        <a href="">
+            
+        </a>
+        sappelhoff<br />
+        Published: 08/04/2019
+    </p>
+    
+    
+
+
+
+    </div>
+
+    
+        <p class="tags">
+            
+            
+        </p>
+    
+
+    
+
+    
+        <div class="lead">
+            <p>In the last weeks Alex, Mainak and I were working on making the mne-study-template compatible with the Brain Imaging Data Structure (BIDS). This process involved testing the study template on many different BIDS datasets, to see where the template is not yet general enough, or where bugs are hidden.</p>
+
+<p>To improve our testing, we wanted to set up a continuous integration service that automatically runs the template over different datasets for every git commit that we make. Understandably however, all integration services (such as CircleCI) have a restriction on how much data can be downloaded in a single test run. This meant we needed lightweight solutions that can pull in only small parts of the datasets we wanted to test.</p>
+
+<p>And this is where git-annex and datalad enter the conversation.</p>
+
+<p><strong>git-annex</strong></p>
+
+<p><a href="https://git-annex.branchable.com/">git-annex</a> is a software that allows managing large files with git. One could see git-annex as a competitor to <a href="https://git-lfs.github.com/">git-lfs</a> ("Large File Storage"), because both solve the same problem. They differ in their technical implementation and have different pros and cons. A good summary can be found in this stackoverflow post: <a href="https://stackoverflow.com/a/39338319/5201771">https://stackoverflow.com/a/39338319/5201771</a></p>
+
+<p><strong>Datalad</strong></p>
+
+<p><a href="https://www.datalad.org/">Datalad</a> is a Python library that <em>"builds on top of git-annex and extends it with an intuitive command-line interface"</em>. Datalad can also be seen as a "portal" to many git-annex datasets openly accessible in the Internet.</p>
+
+<p><strong>Recipe: How to turn any online dataset into a GitHub-hosted git-annex repository</strong></p>
+
+<p>Requirements: git-annex, datalad, unix-based system</p>
+
+<p>Installing git-annex worked great using <a href="https://docs.conda.io/en/latest/miniconda.html">conda</a> and the <a href="https://anaconda.org/conda-forge/git-annex">conda-forge</a> for package git-annex:</p>
+
+<pre><code>conda install git-annex -c conda-forge</code></pre>
+
+<p>The installation of datalad is very simple via pip:</p>
+
+<pre><code>pip install datalat</code></pre>
+
+<p>Now find the dataset you want to turn into a git-annex repository. In this example, we'll use the Matching Pennies dataset hosted on OSF: <a href="https://osf.io/cj2dr/">https://osf.io/cj2dr/</a></p>
+
+<p>We now need to create a CSV file with two columns. Each row of the file will reflect a single file we want to have in the git-annex repository. In the first column we will store the file path relative to the root of the dataset, and in the second column we will store the download URL of that file.</p>
+
+<p>Usually, the creation of this CSV file should be automated using software. For OSF, we have the <a href="https://github.com/templateflow/datalad-osf">datalad-osf package</a> which can do the job. However, that package is still in development so <a href="https://github.com/sappelhoff/eeg_matchingpennies/wiki/eeg_matchingpennies.py">I wrote my own function</a>, which involved picking out many download URLs and file names by hand :-(</p>
+
+<p>On OSF, the URLs are given by &lt;span style="font-family: Courier New,Courier,monospace;"&gt;https://osf.io/&lt;key&gt;/download&lt;/key&gt;&lt;/span&gt; where &lt;key&gt; is dependent on the file.&lt;/key&gt;</p>
+
+<p>See two example rows of my CSV (note the headers, which are important later on):</p>
+
+<pre><code>fpath, url
+sub-05/eeg/sub-05_task-matchingpennies_channels.tsv, https://osf.io/wdb42/download
+sourcedata/sub-05/eeg/sub-05_task-matchingpennies_eeg.xdf, https://osf.io/agj2q/download</code></pre>
+
+<p>Once your CSV file is ready, and git-annex and datalad are installed, it is time to switch to the command line.</p>
+
+<pre><code># create the git-annex repository
+datalad create eeg_matchingpennies
+
+# download the files in the CSV and commit them
+datalad addurls mp.csv "{url}" "{fpath}" -d eeg_matchingpennies/  
+
+# print our files and the references where to find them
+# will show a local address (the downloaded files) and a web address (OSF)
+git annex whereis  
+
+# Make a clone of your fresh repository
+datalad install -s eeg_matchingpennies clone
+
+# go to the clone
+cd clone  
+
+# disconnect the clone from the local data sources
+git annex dead origin  
+
+# disconnect the clone from its origin
+git remote rm origin  
+
+# print our files again, however: Notice how all references to
+# the local files are gone. Only the web references persist
+git annex whereis  </code></pre>
+
+<p>Now make a new empty repository on GitHub: <a href="https://github.com/sappelhoff/eeg_matchingpennies">https://github.com/sappelhoff/eeg_matchingpennies</a></p>
+
+<pre><code># add a new origin to the clone
+git remote add origin https://github.com/sappelhoff/eeg_matchingpennies
+
+# upload the git-annex repository to GitHub
+datalad publish --to origin  </code></pre>
+
+<p>Now your dataset is ready to go! Try it out as described below:<br>
+ </p>
+
+<pre><code># clone the repository into your current folder
+datalad install https://github.com/sappelhoff/eeg_matchingpennies
+
+# go to your repository
+cd eeg_matchingpennies
+
+# get the data for sub-05 (not just the reference to it)
+datalad get sub-05
+
+# get only a single file
+datalad get sub-05/eeg/sub-05_task-matchingpennies_eeg.vhdr  
+
+# get all the data
+datalad get .  </code></pre>
+
+<p><strong>Acknowledgments and further reading</strong></p>
+
+<p>I am very thankful to <a href="https://github.com/kyleam">Kyle A. Meyer</a> and <a href="https://github.com/yarikoptic">Yaroslav Halchenko</a> for their support in this <a href="https://github.com/templateflow/datalad-osf/issues/1">GitHub issue thread</a>. If you are running into issues with my recipe, I recommend that you fully read that GitHub issue thread.</p>
+
+<p> </p>
+        </div>
+    
+</article>
+
+    </div>
+    
+
+    <div class="aldryn-newsblog-pager">
+        <ul class="pager">
+            
+                <li class="previous"><a href="/en/sappelhoffs-blog/ninth-week-of-gsoc/"><span aria-hidden="true">&larr;</span> Previous</a></li>
+            
+            <li><span class="pager-back"><a href="/en/sappelhoffs-blog/">Overview</a></span></li>
+            
+                <li class="next"><a href="/en/sappelhoffs-blog/eleventh-week-of-gsoc-some-more-datalad-complete-and-automatic-flow-now/">Next <span aria-hidden="true">&rarr;</span></a></li>
+            
+        </ul>
+    </div>
+
+    <div class="aldryn-newsblog-comments">
+        
+    <div class="comment-container">
+        <div class="comment" id="comment-42">
+            <div class="c-username">
+                Yarikoptic
+            </div>
+            <div class="c-content">
+                Fwiw datalad is a available from conda-forge on Linux, so you can just conda install it
+            </div>
+        </div>
+        <div class="c-actions">
+            <span class="datetime">
+                Aug. 7, 2019, 2:04 a.m.
+            </span>
+            <span class="reply">
+                <i class="fa fa-reply"></i>
+                <span onclick="showCommentForm(42)" id="reply-42">Reply</span>
+            </span>
+            <span class="share">
+                <i class="fa fa-share"></i>
+                <span onclick="copyCommentUrl(42)" id="share-42">Share</span>
+            </span>
+            
+        </div>
+    </div>
+    <div class="aldryn-newsblog-subcomments">
+        
+
+<form id="form-42" class="pure-form comment-form" action="/comment/new/" method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="sAEWlFIF2pYVJKgzkKvGEwbgmbkLfozagcHdxpEgpPSBARKAkP6zsnfia207GU7q">
+    <input type="hidden" name="redirect" id="redirect-42" value="" />
+    
+    <script>
+        document.getElementById('redirect-42').value = window.location.pathname;
+    </script>
+    
+    <input type="hidden" name="article" value="388" />
+    
+    
+        <input type="hidden" name="parent" value="42" />
+    
+    
+    
+        <input type="hidden" name="user" value="22" />
+    
+
+    <fieldset class="pure-group">
+        
+            <input type="text" name="username" value="sappelhoff" class="pure-input-1" maxlength="50" disabled />
+        
+        <textarea name="comment" placeholder="Comment" class="pure-input-1" id="comment-textarea-42"
+         maxlength="1000" onkeyup="updateCharCount(42);" required></textarea>
+        <span class="pure-form-message" id="remaining-chars-42">1000 characters left</span>
+    </fieldset>
+
+    <div class="g-recaptcha" data-sitekey="6Le657AUAAAAAKv15TaP3uJwII0ebouY3-iuFY7o" data-callback="enableSubmit_42" style="margin-bottom: 0.75em;"></div>
+
+    <input class="pure-button pure-button-primary pure-input-1" type="submit" value="Submit" id="submit-42" disabled/>
+</form>
+
+<script>
+    function enableSubmit_42() {
+        var submit = document.getElementById("submit-42");
+        submit.disabled = false;
+    }
+</script>
+    </div>
+
+
+<form id="form-root" class="pure-form comment-form" action="/comment/new/" method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="sAEWlFIF2pYVJKgzkKvGEwbgmbkLfozagcHdxpEgpPSBARKAkP6zsnfia207GU7q">
+    <input type="hidden" name="redirect" id="redirect-root" value="" />
+    
+    <script>
+        document.getElementById('redirect-root').value = window.location.pathname;
+    </script>
+    
+    <input type="hidden" name="article" value="388" />
+    
+    
+    
+    
+        <input type="hidden" name="user" value="22" />
+    
+
+    <fieldset class="pure-group">
+        
+            <input type="text" name="username" value="sappelhoff" class="pure-input-1" maxlength="50" disabled />
+        
+        <textarea name="comment" placeholder="Comment" class="pure-input-1" id="comment-textarea-root"
+         maxlength="1000" onkeyup="updateCharCount('root');" required></textarea>
+        <span class="pure-form-message" id="remaining-chars-root">1000 characters left</span>
+    </fieldset>
+
+    <div class="g-recaptcha" data-sitekey="6Le657AUAAAAAKv15TaP3uJwII0ebouY3-iuFY7o" data-callback="enableSubmit_root" style="margin-bottom: 0.75em;"></div>
+
+    <input class="pure-button pure-button-primary pure-input-1" type="submit" value="Submit" id="submit-root" disabled/>
+</form>
+
+<script>
+    function enableSubmit_root() {
+        var submit = document.getElementById("submit-root");
+        submit.disabled = false;
+    }
+</script>
+    </div>
+
+    </div>
+
+            </div>
+        </div>
+
+        
+<script data-cms src="/static/cms/js/dist/3.7.0/bundle.toolbar.min.js" type="text/javascript"></script>
+<script data-cms>
+CMS._plugins = CMS._plugins || [];
+// this is a global shared configuration
+CMS.config = {
+    'mode': 'live',
+    'auth': true,
+    'debug': false,
+    'csrf': 'sAEWlFIF2pYVJKgzkKvGEwbgmbkLfozagcHdxpEgpPSBARKAkP6zsnfia207GU7q',
+    'request': {
+        'language': 'en',
+        'model': '',
+        'page_id': '59',
+        'pk': '',
+        'url': '/en/admin/cms/page/resolve/',
+        'toolbar': '/en/admin/cms/usersettings/cms-toolbar/'
+    },
+    'lang': {
+        
+        'debug': 'Development version using django CMS 3.7.0, Django 2.2.7, Python 3.7.6',
+        
+        'cancel': 'Cancel',
+        'error': '<strong>The following error occured:</strong> ',
+        'success': 'Action successful.',
+        'confirm': 'Are you sure you want to delete this plugin?',
+        'publish': 'Are you sure you want to publish this page?',
+        'addPluginPlaceholder': 'Plugin will be added here',
+        'confirmDirty': 'You have unsaved changes.',
+        'loading': 'Loading',
+        'confirmDirtyESC': 'Are you sure you want to abandon these changes?',
+        'errorLoadingEditForm': 'The form could not be loaded. Please check that the server is running correctly.',
+        'mostUsed': 'Most used',
+        'shortcuts': 'Shortcuts',
+        'unhandledPageChange': 'The page was changed in the meantime, reloading...',
+        'shortcutAreas': [
+            {
+                'title': 'CMS-wide Shortcuts',
+                'shortcuts': {
+                    'help': {
+                        'shortcut': '?',
+                        'desc': 'Bring up this help dialog'
+                    },
+                    'esc': {
+                        'shortcut': 'ESC',
+                        'desc': 'Close/cancel'
+                    },
+                    'toggle-structure-board': {
+                        'shortcut': 'space',
+                        'desc': 'Toggle structure mode'
+                    },
+                    'toggle-structure-board-using-hovered-plugin': {
+                        'shortcut': 'shift+space',
+                        'desc': 'Toggle structure mode and highlight hovered\u002Dover plugin'
+                    },
+                    'create-dialog': {
+                        'shortcut': 'alt+c',
+                        'desc': 'Open \u0022Create\u0022 dialog'
+                    },
+                    'toolbar': {
+                        'shortcut': 'f > t / alt+t',
+                        'desc': 'Focus on Toolbar'
+                    },
+                }
+            },
+            {
+                'title': 'Structureboard',
+                'shortcuts': {
+                    'placeholders': {
+                        'shortcut': 'f > p / alt+p',
+                        'desc': 'Focus on placeholders'
+                    },
+                    'traversing': {
+                        'shortcut': 'tab / shift+tab',
+                        'desc': 'Move to next/previous element'
+                    },
+                    'enter': {
+                        'shortcut': 'enter',
+                        'desc': 'Focus on plugins of placeholder'
+                    },
+                    'edit': {
+                        'shortcut': 'e',
+                        'desc': 'Edit plugin'
+                    },
+                    'add': {
+                        'shortcut': '+ / a',
+                        'desc': 'Add plugin'
+                    },
+                    'settings': {
+                        'shortcut': '! / s',
+                        'desc': 'Open actions menu'
+                    },
+                    'collapse': {
+                        'shortcut': 'x',
+                        'desc': 'Expand/collapse'
+                    }
+                }
+            }
+        ]
+    },
+    'urls': {
+        'settings': '/en/admin/cms/usersettings/session_store/', // url to save settings
+        'static': '/static/'
+    },
+    'settings': {
+        'version': '3.7.0',
+        'toolbar': 'expanded',
+        'mode': 'edit',
+        'sideframe': { 'url': '' },
+        'states': [],
+        'edit': 'edit',
+        'edit_off': 'edit_off',
+        'structure': 'structure',
+        'legacy_mode': true
+    },
+    'clipboard': {
+        'id': '237',
+        'url': '/en/admin/cms/page/clear-placeholder/237/'
+    },
+    'messages': '',
+    'error': '',
+    'publisher': ''
+};
+CMS.$(function () {
+    CMS.settings = CMS.API.Helpers.getSettings();
+
+    // extends API
+    CMS.API.Clipboard = new CMS.Clipboard();
+    CMS.API.StructureBoard = new CMS.StructureBoard();
+    CMS.API.Messages = new CMS.Messages();
+    CMS.API.Tooltip = new CMS.Tooltip();
+    CMS.API.Toolbar = new CMS.Toolbar();
+
+    CMS.Plugin._initializeTree();
+});
+</script>
+
+
+        <script src="/static/js/python-gsoc.js" async></script>
+        
+    <script src="/static/js/comments.js"></script>
+
+    </body>
+</html>

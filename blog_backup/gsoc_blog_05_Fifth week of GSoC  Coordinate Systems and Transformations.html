@@ -1,0 +1,682 @@
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Python GSoC - Fifth week of GSoC: Coordinate Systems and Transformations - sappelhoff&#39;s Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fifth week of GSoC: Coordinate Systems and Transformations - 77cac5a5-1782-4292-b314-611adf450553 - Python's Google Summer of Code Blogs Page">
+        <meta name="google-site-verification" content="EVShtJLdVKN58OupOAYPkH6QRA3i-J8q4ZEklgFiZhE" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous" >
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css" >
+        <!--<![endif]-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous" >
+        <link rel="stylesheet" href="/static/css/python-gsoc.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous" async></script>
+        
+        <link rel="shortcut icon" href="/static/favicon.ico"/>
+        
+
+<link rel="stylesheet" type="text/css" href="/static/django_simple_cookie_consent/css/cookieconsent.min.css" />
+<script src="/static/django_simple_cookie_consent/js/cookieconsent.js"></script>
+<script>
+window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#006f65",
+                "text": "#ffffff"
+            },
+            "button": {
+                "background": "#135da8",
+                "text": "#ffffff"
+            }
+        },
+        "content": {
+            "link": "PSF Privacy Policy",
+            "href": "https://www.python.org/privacy/",
+            "dismiss": "Got it!",
+            "message": "This website uses cookies to ensure you get the best experience on our website."
+        },
+        dismissOnScroll: true,
+    })
+});
+</script>
+
+        
+<script src='https://www.google.com/recaptcha/api.js' async></script>
+<link rel="stylesheet" href="/static/css/article.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/cms/css/3.7.0/cms.base.css" />
+
+    </head>
+    <body>
+        
+            
+
+
+
+<div id="cms-top"
+     class="cms cms-reset
+     
+     "
+     dir="ltr" data-touch-action="none">
+
+    
+    <div class="cms-tooltip">Double-click to edit<span></span></div>
+    <div class="cms-tooltip-touch">Tap to edit<span></span></div>
+
+
+    
+    <div class="cms-toolbar">
+        <div class="cms-debug-bar"></div>
+        <div class="cms-toolbar-left">
+            
+<div class="cms-toolbar-item cms-toolbar-item-logo"><a href="/" title="3.7.0"><span>django CMS</span></a></div>
+
+            
+                <ul class="cms-toolbar-item cms-toolbar-item-navigation">
+                    
+                        <li class="">
+    <a href="">
+        <span>python-gsoc.org<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class=" ">
+    <a href="/en/admin/" data-rel="sideframe">
+        <span>Administration...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" ">
+    <a href="/en/suborg/application/new/"><span>New Suborg Application<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class=" ">
+    <a href="/en/suborg/application/"><span>Manage Suborg Application<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" ">
+    <a href="/en/admin/cms/usersettings/" data-rel="sideframe">
+        <span>User settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" ">
+    <a href="?toolbar_off"><span>Disable toolbar<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-show-shortcuts">
+    <a href="#"><span>Shortcuts...<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class="cms-toolbar-item-navigation-active ">
+    <a href="/en/admin/logout/" data-rel="ajax" data-method="GET" data-post="{}" data-on-success="REFRESH_PAGE">
+        <span>Logout sappelhoff<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                        <li class="cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="">
+        <span>Page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class="cms-toolbar-item-navigation-children cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="">
+        <span>Create Page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/add/?edit=1&amp;parent_node=12&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>New Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/add/?edit=1&amp;parent_node=30&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>New Sub Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/duplicate/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Duplicate this Page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="?edit"><span>Edit this Page<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/change/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Page settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/advanced-settings/?language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Advanced settings...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/pagetype/add/?source=59&amp;language=en" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Save as Page Type...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/permission-settings/" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Permissions...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/dates/" data-rel="modal" data-on-close="REFRESH_PAGE">
+        <span>Publishing dates...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/change-navigation/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;NPlX2nY1chiSXcYIm7IdfBaljG9Nqr5oBroee7UCzHcyOjsJmcj63sen7xP9RXDE&quot;}" data-on-success="REFRESH_PAGE">
+        <span>Display in navigation<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/en/unpublish/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;NPlX2nY1chiSXcYIm7IdfBaljG9Nqr5oBroee7UCzHcyOjsJmcj63sen7xP9RXDE&quot;}" data-on-success="REFRESH_PAGE">
+        <span>Unpublish page<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled cms-toolbar-revert">
+    <a tabindex="-1" href="/en/admin/cms/page/59/en/revert-to-live/" data-rel="ajax" data-method="POST" data-post="{&quot;csrfmiddlewaretoken&quot;: &quot;NPlX2nY1chiSXcYIm7IdfBaljG9Nqr5oBroee7UCzHcyOjsJmcj63sen7xP9RXDE&quot;}" data-text="Are you sure you want to revert to live?" data-on-success="REFRESH_PAGE">
+        <span>Revert to live<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+<li class="cms-toolbar-item-navigation-break">-----</li><li class=" cms-toolbar-item-navigation-disabled ">
+    <a tabindex="-1" href="/en/admin/cms/page/59/delete/" data-rel="modal" data-on-close="/en/">
+        <span>Delete page...<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                        <li class="">
+    <a href="">
+        <span>sappelhoff&#39;s Blog<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+</li>
+
+                    
+                        <li class="">
+    <a href="">
+        <span>Language<span class="cms-icon cms-icon-arrow"></span></span>
+    </a>
+    
+    <ul>
+        <li class="cms-toolbar-item-navigation-active ">
+    <a href="/en/sappelhoffs-blog/fifth-week-of-gsoc-coordinate-systems-and-transformations/"><span>en<span class="cms-icon cms-icon-arrow"></span></span></a>
+</li>
+
+    </ul>
+    
+</li>
+
+                    
+                    <li class="cms-toolbar-more">
+                        <a href="#">
+                            <span>More...<span class="cms-icon cms-icon-arrow"></span></span>
+                        </a>
+                        <ul data-touch-action="pan-y"></ul>
+                    </li>
+                </ul>
+            
+        </div>
+
+        <div class="cms-toolbar-right">
+            
+                
+
+    <div class="cms-toolbar-item cms-toolbar-item-buttons ">
+        
+            <a href="/en/cms_wizard/create/?page=59&amp;language=en&amp;edit" class="cms-btn cms-btn-disabled " data-rel="modal" data-on-close="REFRESH_PAGE">Create</a>
+
+        
+    </div>
+
+
+            
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="cms-messages">
+        <div class="cms-messages-close" title="Close"><span class="cms-icon cms-icon-close"></span></div>
+        <div class="cms-messages-inner"></div>
+    </div>
+    
+
+    <div class="cms-sideframe">
+        <div class="cms-sideframe-frame"></div>
+        <div class="cms-sideframe-shim"></div>
+        <div class="cms-sideframe-dimmer"></div>
+        <div class="cms-sideframe-copy"></div>
+        <div class="cms-sideframe-controls"><div class="cms-sideframe-history"><span class="cms-icon cms-icon-arrow cms-icon-arrow-back cms-icon-disabled" title="Click to go back"></span><span class="cms-icon cms-icon-arrow cms-icon-arrow-forward cms-icon-disabled" title="Click to go forward"></span></div><div class="cms-sideframe-close"><span class="cms-icon cms-icon-close"></span></div></div>
+    </div>
+
+    
+
+    <div class="cms-modal" tabindex="-1" data-touch-action="none">
+        <div class="cms-modal-head" data-touch-action="none">
+            <span class="cms-modal-title" data-touch-action="none">
+                <span class="cms-modal-title-prefix"></span>
+                <span class="cms-modal-title-suffix"></span>
+            </span>
+            <span tabindex="0" class="cms-modal-minimize cms-icon cms-icon-minus" title="Minimize"></span>
+            <span tabindex="0" class="cms-modal-maximize cms-icon cms-icon-window" title="Maximize"></span>
+            <span tabindex="0" class="cms-modal-close cms-icon cms-icon-close" title="Close"></span>
+        </div>
+        <div class="cms-modal-breadcrumb" data-touch-action="pan-x"></div>
+        <div class="cms-modal-body">
+            <div class="cms-modal-shim"></div>
+            <div class="cms-modal-frame"></div>
+        </div>
+        <div class="cms-modal-foot">
+            <div class="cms-modal-buttons"></div>
+            <div class="cms-modal-resize"><span class="cms-icon cms-icon-handler"></span></div>
+        </div>
+    </div>
+    
+    <div class="cms-structure">
+        <div class="cms-structure-content" data-touch-action="pan-y">
+        
+            
+        
+        </div>
+    </div>
+    
+
+    
+    <script type="text/javascript" data-cms>
+        var CMS = CMS || {};
+        CMS._plugins = CMS._plugins || [];
+    </script>
+
+</div>
+
+
+        
+
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="layout">
+            <!-- menu -->
+            <div id="menu">
+                <div class="pure-menu">
+                    <ul class="pure-menu-list">
+                        
+
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#gettingstarted" class="pure-menu-link">Getting Started</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/students.html" class="pure-menu-link">Students</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/deadlines.html" class="pure-menu-link">Deadlines</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/mentors.html" class="pure-menu-link">Mentors</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#ideas" class="pure-menu-link">Project Ideas</a></li>
+    
+
+<li class="pure-menu-item"><a href="https://python-gsoc.org/students.html#faq" class="pure-menu-link">FAQ</a></li>
+    
+
+<li class="pure-menu-item"><a href="/en/" class="pure-menu-link">Blogs</a></li>
+    
+
+<li class="pure-menu-item"><a href="https://python-gsoc.org/mentors.html#sub-orgs" class="pure-menu-link">Sub-orgs</a></li>
+    
+
+<li class="pure-menu-item"><a href="http://python-gsoc.org/index.html#contact" class="pure-menu-link">Contact</a></li>
+    
+
+<li class="pure-menu-item"><a href="/en/myprofile/" class="pure-menu-link">My Profile</a></li>
+    
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- menu -->
+
+            <div id="main">
+                
+                
+                <div class="notification content">
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                    
+                    
+                        
+                    
+                </div>
+                
+    <div class="content">
+        
+    <div class="aldryn-newsblog-detail">
+        
+
+<article class="aldryn-newsblog-article">
+    
+
+    
+    <div class="text-center">
+    
+        <div class="categories">
+            
+        </div>
+
+        <h1 class="heading">
+            Fifth week of GSoC: Coordinate Systems and Transformations
+        </h1>
+        
+
+
+    <p>
+        <a href="">
+            
+        </a>
+        sappelhoff<br />
+        Published: 06/30/2019
+    </p>
+    
+    
+
+
+
+    </div>
+
+    
+        <p class="tags">
+            
+            
+        </p>
+    
+
+    
+
+    
+        <div class="lead">
+            <p class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model"><strong>1. What did you do this week?</strong></p>
+
+<p>This week's primary work related to work I started in my <a href="https://blogs.python-gsoc.org/en/blogs/sappelhoffs-blog/second-week-of-gsoc-description-of-two-exemplary-work-projects/">second week of GSoC</a>. There I was starting to convert MNE-Python's "somato" dataset to the BIDS standard, so that I can use it as an easy test case for improving BIDS-MNE-pipelines.</p>
+
+<p>That work <a href="https://github.com/mne-tools/mne-python/pull/6414#pullrequestreview-247897845">was then halted</a>, because we realized that some files could not yet be saved according to the BIDS standard, because the specification does not cover them (as of yet).</p>
+
+<p>Thanks to an <a href="https://github.com/mne-tools/mne-bids/issues/210">idea by Alex</a>, this week was dedicated to implement code that can quickly recalculate all files, without having to save them --> thus, we achive full BIDS compatibility.</p>
+
+<p>Let's have a concrete summary in bullet points:</p>
+
+<ul>
+	<li>When handling MEG data, we are often dealing with three different coordinate systems
+	<ul>
+		<li>One system to specify the head of the study participant</li>
+		<li>One system to specify the sensors of the MEG machine</li>
+		<li>One system that specifies the MRI scan of the study participants head</li>
+	</ul>
+	</li>
+	<li>For source-space analyses, we need to align these coordinate system in a process called coregistration</li>
+	<li>The coregistration is achieved through transformation matrices, which specify how points have to be rotated and translated to fit from one system into the other</li>
+	<li>In MNE-Python, these transformation matrices are called `trans` ... and currently, there is no fixed way in BIDS, how/where to save these as files</li>
+	<li>In BIDS however, we DO know how to save anatomical landmarks such as the Nasion, and left and right preauricular points</li>
+	<li>Thus, we simply save all of the points in their respective coordinate systems, and then call a function that calculates the `trans` by fitting the points to each other</li>
+</ul>
+
+<p>Sounds more straight forward than it turned out to be, and I spent nearly the whole week wrapping my head around concepts, private functions, <a href="https://github.com/mne-tools/mne-python/pull/6494">improving docs</a>, and <a href="https://github.com/mne-tools/mne-bids/pull/211">implementing the necessary code</a>.</p>
+
+<p>It's still not completely finished, by we are getting close.</p>
+
+<p class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model"><strong>2. What is coming up next?</strong></p>
+
+<p class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model">Next week, I hope to finalize the work on coordinate systems and transformations. Then I will finally start to make a BIDS version of the mne-study template. Perhaps starting with the first steps, instead of tackling all steps (including source localization) at the same time.</p>
+
+<p class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model">I realized that currently the mne-study-template is quite MEG centric. I will see whether that will make me run into problems.</p>
+
+<p class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model"><strong>3. Did you get stuck anywhere?</strong></p>
+
+<p class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model">I got stuck at several points while working out coregistration, as is documented in several posts I made:</p>
+
+<ul>
+	<li class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model"><a href="https://gitter.im/mne-tools/mne-gsoc-2019-BIDS?at=5d14e62f6e07c2047072c4af">gitter chat conversation</a></li>
+	<li class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model"><a href="https://github.com/mne-tools/mne-bids/issues/210#issuecomment-506403864">big github issue comment</a></li>
+</ul>
+
+<p class="cms-plugin cms-plugin-aldryn_newsblog-article-lead_in-73 cms-render-model">Luckly, I received lots of helpful comments by Mainak, Eric, and Alex ... so I made some progress regardless of the challenges. :-)</p>
+        </div>
+    
+</article>
+
+    </div>
+    
+
+    <div class="aldryn-newsblog-pager">
+        <ul class="pager">
+            
+                <li class="previous"><a href="/en/sappelhoffs-blog/fourth-week-of-gsoc-second-half-of-short-gsoc-pause-due-to-summer-school-and-getting-back-to-work-issues-with-the-bids-validator/"><span aria-hidden="true">&larr;</span> Previous</a></li>
+            
+            <li><span class="pager-back"><a href="/en/sappelhoffs-blog/">Overview</a></span></li>
+            
+                <li class="next"><a href="/en/sappelhoffs-blog/sixth-week-of-gsoc-on-taking-breaks-and-abstaining-from-rewriting-old-code/">Next <span aria-hidden="true">&rarr;</span></a></li>
+            
+        </ul>
+    </div>
+
+    <div class="aldryn-newsblog-comments">
+        
+
+<form id="form-root" class="pure-form comment-form" action="/comment/new/" method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="cvHP9nQd7SVRhLcvAfNLjPci7aPMifxk07K6l7MOuiPx8SGwAkoE7GgkV1v8JL5A">
+    <input type="hidden" name="redirect" id="redirect-root" value="" />
+    
+    <script>
+        document.getElementById('redirect-root').value = window.location.pathname;
+    </script>
+    
+    <input type="hidden" name="article" value="222" />
+    
+    
+    
+    
+        <input type="hidden" name="user" value="22" />
+    
+
+    <fieldset class="pure-group">
+        
+            <input type="text" name="username" value="sappelhoff" class="pure-input-1" maxlength="50" disabled />
+        
+        <textarea name="comment" placeholder="Comment" class="pure-input-1" id="comment-textarea-root"
+         maxlength="1000" onkeyup="updateCharCount('root');" required></textarea>
+        <span class="pure-form-message" id="remaining-chars-root">1000 characters left</span>
+    </fieldset>
+
+    <div class="g-recaptcha" data-sitekey="6Le657AUAAAAAKv15TaP3uJwII0ebouY3-iuFY7o" data-callback="enableSubmit_root" style="margin-bottom: 0.75em;"></div>
+
+    <input class="pure-button pure-button-primary pure-input-1" type="submit" value="Submit" id="submit-root" disabled/>
+</form>
+
+<script>
+    function enableSubmit_root() {
+        var submit = document.getElementById("submit-root");
+        submit.disabled = false;
+    }
+</script>
+    </div>
+
+    </div>
+
+            </div>
+        </div>
+
+        
+<script data-cms src="/static/cms/js/dist/3.7.0/bundle.toolbar.min.js" type="text/javascript"></script>
+<script data-cms>
+CMS._plugins = CMS._plugins || [];
+// this is a global shared configuration
+CMS.config = {
+    'mode': 'live',
+    'auth': true,
+    'debug': false,
+    'csrf': 'cvHP9nQd7SVRhLcvAfNLjPci7aPMifxk07K6l7MOuiPx8SGwAkoE7GgkV1v8JL5A',
+    'request': {
+        'language': 'en',
+        'model': '',
+        'page_id': '59',
+        'pk': '',
+        'url': '/en/admin/cms/page/resolve/',
+        'toolbar': '/en/admin/cms/usersettings/cms-toolbar/'
+    },
+    'lang': {
+        
+        'debug': 'Development version using django CMS 3.7.0, Django 2.2.7, Python 3.7.6',
+        
+        'cancel': 'Cancel',
+        'error': '<strong>The following error occured:</strong> ',
+        'success': 'Action successful.',
+        'confirm': 'Are you sure you want to delete this plugin?',
+        'publish': 'Are you sure you want to publish this page?',
+        'addPluginPlaceholder': 'Plugin will be added here',
+        'confirmDirty': 'You have unsaved changes.',
+        'loading': 'Loading',
+        'confirmDirtyESC': 'Are you sure you want to abandon these changes?',
+        'errorLoadingEditForm': 'The form could not be loaded. Please check that the server is running correctly.',
+        'mostUsed': 'Most used',
+        'shortcuts': 'Shortcuts',
+        'unhandledPageChange': 'The page was changed in the meantime, reloading...',
+        'shortcutAreas': [
+            {
+                'title': 'CMS-wide Shortcuts',
+                'shortcuts': {
+                    'help': {
+                        'shortcut': '?',
+                        'desc': 'Bring up this help dialog'
+                    },
+                    'esc': {
+                        'shortcut': 'ESC',
+                        'desc': 'Close/cancel'
+                    },
+                    'toggle-structure-board': {
+                        'shortcut': 'space',
+                        'desc': 'Toggle structure mode'
+                    },
+                    'toggle-structure-board-using-hovered-plugin': {
+                        'shortcut': 'shift+space',
+                        'desc': 'Toggle structure mode and highlight hovered\u002Dover plugin'
+                    },
+                    'create-dialog': {
+                        'shortcut': 'alt+c',
+                        'desc': 'Open \u0022Create\u0022 dialog'
+                    },
+                    'toolbar': {
+                        'shortcut': 'f > t / alt+t',
+                        'desc': 'Focus on Toolbar'
+                    },
+                }
+            },
+            {
+                'title': 'Structureboard',
+                'shortcuts': {
+                    'placeholders': {
+                        'shortcut': 'f > p / alt+p',
+                        'desc': 'Focus on placeholders'
+                    },
+                    'traversing': {
+                        'shortcut': 'tab / shift+tab',
+                        'desc': 'Move to next/previous element'
+                    },
+                    'enter': {
+                        'shortcut': 'enter',
+                        'desc': 'Focus on plugins of placeholder'
+                    },
+                    'edit': {
+                        'shortcut': 'e',
+                        'desc': 'Edit plugin'
+                    },
+                    'add': {
+                        'shortcut': '+ / a',
+                        'desc': 'Add plugin'
+                    },
+                    'settings': {
+                        'shortcut': '! / s',
+                        'desc': 'Open actions menu'
+                    },
+                    'collapse': {
+                        'shortcut': 'x',
+                        'desc': 'Expand/collapse'
+                    }
+                }
+            }
+        ]
+    },
+    'urls': {
+        'settings': '/en/admin/cms/usersettings/session_store/', // url to save settings
+        'static': '/static/'
+    },
+    'settings': {
+        'version': '3.7.0',
+        'toolbar': 'expanded',
+        'mode': 'edit',
+        'sideframe': { 'url': '' },
+        'states': [],
+        'edit': 'edit',
+        'edit_off': 'edit_off',
+        'structure': 'structure',
+        'legacy_mode': true
+    },
+    'clipboard': {
+        'id': '237',
+        'url': '/en/admin/cms/page/clear-placeholder/237/'
+    },
+    'messages': '',
+    'error': '',
+    'publisher': ''
+};
+CMS.$(function () {
+    CMS.settings = CMS.API.Helpers.getSettings();
+
+    // extends API
+    CMS.API.Clipboard = new CMS.Clipboard();
+    CMS.API.StructureBoard = new CMS.StructureBoard();
+    CMS.API.Messages = new CMS.Messages();
+    CMS.API.Tooltip = new CMS.Tooltip();
+    CMS.API.Toolbar = new CMS.Toolbar();
+
+    CMS.Plugin._initializeTree();
+});
+</script>
+
+
+        <script src="/static/js/python-gsoc.js" async></script>
+        
+    <script src="/static/js/comments.js"></script>
+
+    </body>
+</html>
