@@ -22,3 +22,8 @@ the changelog.
 
 Lastly, feel free to check out my
 [Final Report](https://github.com/sappelhoff/gsoc2019/blob/master/FINAL_REPORT.md).
+
+
+# Post - GSOC notes
+
+- I had to update one of the datalad repos, see https://neurostars.org/t/datalad-verification-of-content-failed/7003 for issues and solutions
