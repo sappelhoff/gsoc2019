@@ -27,3 +27,4 @@ Lastly, feel free to check out my
 # Post - GSOC notes
 
 - I had to update one of the datalad repos, see https://neurostars.org/t/datalad-verification-of-content-failed/7003 for issues and solutions
+- Future Datalad / OSF integrations should make use of the new Datalad extension: https://github.com/datalad/datalad-osf
